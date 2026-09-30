@@ -1,201 +1,90 @@
-# Falcon West Website — Design System
+# Falcon West Energy — website overlay
 
-A complete, image-free description of the **website and client-facing** design language for falconwest.com and falconwestenergy.com. Every value here is literal and buildable.
+**This folder is falconwestenergy.com only.** Navy is the brand field. **Sky a11y filled buttons** are `#2F78A7` / hover `#266690`. **Never rust or orange on Energy UI.**
 
-This is **not** the Material / app system. Do not apply Material rules, Material type roles, Material focus, Material casing, or Material shape inversion. If a behavior is not described here, do not borrow it from the app language.
+**Production truth:** [`ENERGY-SITE-LOCKS.md`](ENERGY-SITE-LOCKS.md) wins if this file or the shared main-brand spec disagrees.
+
+Shared type, spacing, shape, and component geometry live in [`../falcon-west/DESIGN.md`](../falcon-west/DESIGN.md). Use that file for Crimson / Raleway scale, radii, cards, and fields. **Do not** use its rust button recipes, rust focus, rust tabs, or rust outline buttons on Energy.
+
+This is **not** Material. Do not apply Material tokens, square-card / app-bar rules, navy focus rings, or rust-700 as “primary.” App / CRM language: [`../material/README.md`](../material/README.md) and [`../material/tokens.json`](../material/tokens.json).
 
 ---
 
 ## 0. The one-sentence read
 
-Traditional and trust-first: a classic serif voice under a Raleway ExtraBold wordmark, navy as the main brand field, rust only on buttons, sky only on links — established and personal, not trendy. *Serving You Since 1981.*
+Traditional and trust-first, Energy-colored: Crimson body under a Raleway ExtraBold wordmark, navy as the brand field, **sky a11y fills on buttons**, sky on links — black, white, and blue only.
 
 ---
 
-## 1. Brand
+## 1. Color (Energy only)
 
-Falcon West is an independent insurance brokerage. The site should feel like a long-standing regional firm: warm, personal, "you," tenure over hype. No emoji. No startup chrome. No photo-hero theater. No falcon watermark used as a standalone page background.
-
-**Voice example**
-
-- Headline: Coverage that protects what you've built.
-- Body: Falcon West has helped families and businesses in the region find the right coverage since 1981 — no jargon, no pressure.
-
----
-
-## 2. Color
-
-### 2.1 Source palette (literal hex)
-
-| Token | Hex | Role |
+| Role | Hex | Notes |
 |---|---|---|
-| `--color-navy-900` | `#15445D` | **Main brand color.** Nav, dark sections, large brand fields. Never a button fill or button border. |
-| `--color-rust-600` | `#D2793D` | **Button fill** (main brand). Filled CTA, or the border of a white outline button. Highlight / rollover accent only — never a dominant background. |
-| `--color-rust-700` | `#A85F2E` | Button hover (main brand). |
-| `--color-sky-500` | `#3D96D2` | Energy highlight / Energy button fill. On the main brand, reserved as a link-family accent — not a button, not a background. |
-| `--color-sky-600` | `#2D78AD` | Main-brand text hyperlink default. |
-| `--color-sky-700` | `#2F78A7` | Energy button hover. |
-| `--color-ink-900` | `#080808` | Headings. |
-| `--color-charcoal-700` | `#434343` | Body copy. |
-| `--color-charcoal-500` | `#6B6B6B` | Muted / caption / helper. |
-| `--color-line-200` | `#DCDCDC` | Card hairline, resting field border. |
-| `--color-paper-50` | `#FCFEFE` | Page background. On-dark text. |
-| `--color-white` | `#FFFFFF` | Cards, outline-button fill, field fill. |
+| Navy brand field | `#15445D` | Nav, dark sections. **Never** a button fill or button border. |
+| **Filled primary (a11y)** | `#2F78A7` | Production rest fill. White label. |
+| **Filled hover (a11y)** | `#266690` | Production hover fill. White label. |
+| Outline / secondary | white fill + 1.5px `#2F78A7` + sky label | Hover: fill `#2F78A7`, white label. |
+| Text link | `#2D78AD` | Hover `#2F78A7` (sky stays sky). |
+| Sky 500 (decorative) | `#3D96D2` | Older decorative / logo / non-a11y fill **only**. Not the production filled-button color. |
+| Ink / body / muted | `#080808` / `#434343` / `#6B6B6B` | Same as main brand. |
+| Line / paper / white | `#DCDCDC` / `#FCFEFE` / `#FFFFFF` | Same as main brand. |
 
-### 2.2 Four color rules (binding)
+### Binding rules
 
-1. **Navy `#15445D` is the main brand color** — navigation, dark sections, large brand fields. **Never** a button fill. **Never** a button border.
-2. **Buttons are always rust orange `#D2793D`** — filled, or white with an orange border. Hover `#A85F2E`.
-3. **Sky blue `#3D96D2` is reserved for text hyperlinks** on the main brand. Link color `#2D78AD`. Link hover `#D2793D`.
-4. **Rust and sky are highlight / rollover accents only.** Resist rust as "primary." Never a dominant background.
-
-Navy is the brand. Rust is the action. Sky is the link. Do not invert these.
-
-### 2.3 Links (main brand)
-
-```css
-a       { color: #2D78AD; text-decoration: underline; }
-a:hover { color: #D2793D; }
-```
-
-Sky is not a button color on the main brand. Rust is not a link color at rest — only the hover of a text link.
-
-### 2.4 Energy token override
-
-Energy shares type, spacing, components, and navy as the main brand field. Energy **never** uses rust or orange. This is a token override, not a second system.
-
-| Role | Main brand | Energy |
-|---|---|---|
-| Button fill | `#D2793D` | `#3D96D2` |
-| Button hover | `#A85F2E` | `#2F78A7` |
-| Outline button | rust border / rust label | sky border / sky label |
-| Focus border | `#D2793D` | `#3D96D2` |
-| Focus ring | `rgba(210,121,61,0.28)` | `rgba(61,150,210,0.28)` |
-| Link | `#2D78AD` / hover rust | `#2D78AD` / hover `#3D96D2` |
-| Palette | navy + rust + sky accents | **black, white, and blue tones only** |
+1. **Never rust or orange** (`#D2793D`, `#A85F2E`, or any orange) on Energy UI.
+2. **Filled buttons use the a11y pair** `#2F78A7` / `#266690`. Do not ship white-on-`#3D96D2` as a small labeled primary.
+3. **`#3D96D2` is not the production button fill.** Logo mark and decorative accent only (see ENERGY-SITE-LOCKS Applications icon).
+4. **Navy is chrome, not a control.** Never a button fill or button border.
+5. **Never blanket all `.fl-button` as primary.**
+6. If this table and [`ENERGY-SITE-LOCKS.md`](ENERGY-SITE-LOCKS.md) disagree, **locks win**.
 
 ---
 
-## 3. Typography
+## 2. Buttons / CTAs
 
-Two families. Do not swap them. Do not add a third.
+Height 44px, horizontal padding 22px, radius 6px, Raleway Bold 15px Title Case — same geometry as the main brand, Energy color only.
 
-```
---font-display  "Raleway", sans-serif     (ExtraBold 800 headings; Bold 700 buttons)
---font-body     "Crimson Text", serif     (Regular 400 body; Italic tagline / pull-quote)
-```
+- **Filled** — background `#2F78A7`, text `#FCFEFE`. Hover `#266690`.
+- **Outline** — background `#FFFFFF`, text `#2F78A7`, `1.5px solid #2F78A7`. Hover fill `#2F78A7`, hover text paper-50.
+- **Ghost** — transparent, text `#2F78A7`, no border. Hover text `#266690`.
 
-Self-host both. No Google Fonts network dependency at render time.
-
-### 3.1 Scale
-
-| Style | Family | Size | Weight | Tracking | Line-height |
-|---|---|---|---|---|---|
-| Display xl | Raleway | 56px | 800 | 0.01em | 1.1 |
-| Display lg | Raleway | 40px | 800 | 0.01em | 1.1 |
-| Display md | Raleway | 30px | 800 | 0.01em | 1.25 |
-| Display sm | Raleway | 22px | 800 | 0.01em | 1.25 |
-| Eyebrow | Raleway | 12px | 700 | 0.14em | 1.2 · uppercase |
-| Button | Raleway | 15px | 700 | 0.01em | 1 · **Title Case** |
-| Lead | Crimson Text | 20px | 400 | 0 | 1.6 |
-| Body | Crimson Text | 18px | 400 | 0 | 1.6 |
-| Pull-quote / tagline | Crimson Text | 20px | 400 italic | 0 | 1.5 |
-| Caption | Crimson Text | 14px | 400 | 0 | 1.5 |
-
-Headings `#080808`. Body `#434343`. Muted `#6B6B6B`. On-dark `#FCFEFE`.
-
-Buttons are Title Case — never Material's uppercase 14/500 tracking. Eyebrows are the only uppercase run.
+Application CTAs: `https://app.falconwest.com/welcome-energy/` only (never `/welcome` or `/start-energy`).
 
 ---
 
-## 4. Shape and surface
+## 3. Focus
+
+2px sky a11y border + soft 3px sky ring — **not** rust, **not** the Material navy ring:
 
 ```
---radius-sm       3px     small chips of chrome
---radius-control  6px     buttons AND fields (they match)
---radius-md       6px     cards
---radius-lg       10px    large panels
---radius-pill     999px   badges only
+border: 2px solid #2F78A7;
+box-shadow: 0 0 0 3px rgba(47,120,167,0.28);
 ```
 
-**Cards:** white, `1px solid #DCDCDC` hairline, `6px` radius, shadow `0 1px 2px rgba(8,8,8,.06), 0 4px 12px rgba(8,8,8,.06)`. **No left-border accent stripe.**
+---
 
-**Page:** `#FCFEFE`. Flat color only. No gradients. No photo heroes. No textures. No glassmorphism. No falcon watermark as a standalone background.
+## 4. Shared type and layout
+
+Reuse [`../falcon-west/DESIGN.md`](../falcon-west/DESIGN.md) §3 (type), §4 (shape / surface), §6.1 (navy nav as a brand field), §6.3 (fields), §6.5 (cards). Swap every rust / orange token for the Energy sky pair above.
+
+Tabs: Raleway Bold Title Case; active text and 2px underline in `#2F78A7` (not rust). Badges may use navy or sky `#3D96D2` as a decorative chip — never as a button.
+
+Label the surface **Falcon West Energy Insurance Solutions**.
 
 ---
 
-## 5. Focus
+## 5. Prohibitions
 
-Main brand — 2px orange border + soft 3px orange ring:
-
-```
-border: 2px solid #D2793D;
-box-shadow: 0 0 0 3px rgba(210,121,61,0.28);
-```
-
-Energy substitutes sky / `rgba(61,150,210,0.28)`.
-
-This is **not** the Material navy ring.
+1. Rust or orange anywhere on Energy UI.
+2. `#3D96D2` as the production filled-button color.
+3. Navy as a button fill or button border.
+4. Blanket `.fl-button` → primary fill.
+5. Material rules (navy focus, uppercase 14/500 buttons, rust-700 primary, 4px/0 shape inversion).
+6. A third typeface, or Montserrat leftover.
+7. Gradients, photo heroes, textures, glassmorphism, or a falcon watermark as a standalone background.
 
 ---
 
-## 6. Components (main brand)
+## 6. Relationship to Material
 
-### 6.1 Navigation
-
-Navy `#15445D` bar, 64–72px tall. This is a brand field, **not a button**. Wordmark "Falcon West" in Raleway ExtraBold white. Tagline "Serving You Since 1981" in Crimson Text Italic, paper-50. In-nav destinations are text links, not rust pills.
-
-### 6.2 Button
-
-Height 44px, horizontal padding 22px, radius 6px, Raleway Bold 15px Title Case.
-
-- **Filled** — background `#D2793D`, text `#FCFEFE`. Hover `#A85F2E`.
-- **Outline** — background `#FFFFFF`, text `#D2793D`, `1.5px solid #D2793D`. Hover fill `#A85F2E`, hover text paper-50.
-- **Ghost** — transparent, text `#D2793D`, no border. Hover text `#A85F2E`.
-
-Navy is never a button. Sky is never a button on the main brand.
-
-### 6.3 Field
-
-Radius 6px (matches the button). Resting: white fill, `1px solid #DCDCDC`, 16px Crimson Text, label in Raleway 12/700 above the box. Focus: 2px `#D2793D` border + 3px orange ring. Helper / caption `#6B6B6B` Crimson 14.
-
-### 6.4 Tabs
-
-Raleway Bold Title Case on a `1px #DCDCDC` rule. Active tab: `#D2793D` text and a 2px rust underline. Inactive: `#6B6B6B`.
-
-### 6.5 Card
-
-See §4. A card is a surface, not an alert. Do not add a colored left rail.
-
-### 6.6 Badge
-
-Height 22px, padding `0 10px`, radius 999. Raleway 11/700, uppercase, tracking 0.08em. Tones: rust (`#D2793D` / paper), sky (`#3D96D2` / paper), navy (`#15445D` / paper). Pills are badges only — never buttons.
-
----
-
-## 7. Energy
-
-Label the surface **Falcon West Energy Insurance Solutions**. Reuse the same components. Swap only the tokens in §2.4. If rust appears anywhere on an Energy surface, the system is broken.
-
----
-
-## 8. Prohibitions
-
-Building any of these means the website language has been broken:
-
-1. Navy as a button fill or button border.
-2. Rust as a page or section background.
-3. Sky used as anything other than a text hyperlink on the main brand (Energy may use sky as the button / highlight).
-4. A third typeface, or swapping Raleway / Crimson Text roles.
-5. Gradients, photo heroes, textures, or glassmorphism.
-6. Left-border accent stripes on cards or callouts.
-7. Rust or orange anywhere on Energy.
-8. Material rules: navy focus ring, uppercase 14/500 buttons, rust-700 as "primary for text," 4px/0 shape inversion, opacity-model body copy.
-9. Treating rust as the primary brand color.
-10. A falcon watermark as a standalone background.
-
----
-
-## 9. Relationship to Material
-
-The app language (Material 2, retuned) lives in `material-design-language.md`. It is a working tool for professionals. This file is the public brokerage. They share a palette and a name. They do not share type roles, button geometry, focus, or shape. Do not reconcile them into one system.
+Material lives in [`../material/README.md`](../material/README.md) / [`../material/tokens.json`](../material/tokens.json). It is a working tool for professionals. This overlay is the Energy marketing site. They share a name and a palette family. They do not share type roles, button geometry, focus, or shape. Do not reconcile them into one system.

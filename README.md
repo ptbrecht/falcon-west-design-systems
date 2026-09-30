@@ -57,10 +57,13 @@ Start here: [`falcon-west/DESIGN.md`](falcon-west/DESIGN.md) · [`falcon-west/sp
 Same website system as Falcon West, with **sky as the action color**. **Never rust or orange.**
 
 - Navy remains the brand field
-- **Sky buttons:** `#3D96D2` / hover `#2F78A7`
+- **Sky filled buttons (a11y):** `#2F78A7` / hover `#266690`
+- `#3D96D2` is older decorative / logo / non-a11y fill only — **not** the production filled-button color
 - Links stay sky
 
-Start here: [`falcon-west-energy/DESIGN.md`](falcon-west-energy/DESIGN.md) · [`falcon-west-energy/energy-colors.html`](falcon-west-energy/energy-colors.html)
+**Production locks** ([`falcon-west-energy/ENERGY-SITE-LOCKS.md`](falcon-west-energy/ENERGY-SITE-LOCKS.md)) override Energy `DESIGN.md` if they disagree.
+
+Start here: [`falcon-west-energy/ENERGY-SITE-LOCKS.md`](falcon-west-energy/ENERGY-SITE-LOCKS.md) · [`falcon-west-energy/DESIGN.md`](falcon-west-energy/DESIGN.md) · [`falcon-west-energy/energy-colors.html`](falcon-west-energy/energy-colors.html)
 
 ---
 

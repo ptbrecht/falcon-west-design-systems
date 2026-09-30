@@ -6,33 +6,21 @@
 **Layout:** unchanged — **theme + colors only** (0.1.64). Home Screen icon **E** stays.  
 **In scope beyond paint:** Island padding + rail theme dot only. No Lists toggle / XDate as in-scope.
 
-**Token lock:** [`tokens.json`](tokens.json) and [`DESIGN.md`](DESIGN.md) win over any older 4px-card or navy-contained-button note in this file. Cards are square (`0`). Navy is chrome, never a button fill.
+**Token lock:** [`tokens.json`](tokens.json) and [`README.md`](README.md) (Claude pack) win. `--md-primary` is **rust-700**. Cards are square (`0`). Navy is chrome, never a button fill. Leftover UX seed: [`DESIGN.md`](DESIGN.md) (superseded).
+
+**Accent C is optional.** Sky `#2d78ad` FAB/CTA comps in this file are a CRM paint experiment — **not** Material law. Do not treat “no rust primary” as a Material rule. Claude rust-700 remains the Material primary.
 
 ## Paths
 
-All under `/workspace/brand/fw-crm-material-theme/`:
+In-repo Material / CRM paint notes (this folder). Shared font: [`../fonts/Raleway.ttf`](../fonts/Raleway.ttf). App marks: [`../assets/logos/app/`](../assets/logos/app/). CRM mock HTML/PNG comps and `icons-064/` are **not** in this repo — get them from the CRM plugin work if needed.
 
 | File | Role |
 |---|---|
-| `light-tokens.md` | Token table, Appearance default System, mobile black chrome, contrast risks |
-| `light-tokens.css` | CSS variables scoped `.fw-crm[data-theme="light"]` / `html.fw-crm-theme-light` — enqueue after Material/CRM CSS |
-| `Raleway.ttf` | Local house font |
-| `icon-e-192.png` | Home Screen icon E reference |
-| `desktop-functions-list-light.html` + `.png` | Dense Functions/Energy list |
-| `desktop-card-board-light.html` + `.png` | Board + chips + rust Add + sky Drive + drag rust-100 |
-| `desktop-settings-light.html` + `.png` | Settings Appearance: Dark \| Light \| **System** selected |
-| `desktop-home-dark-sky-cta.html` + `.png` | Dark **charcoal** board · sky ADD `#2d78ad` (Accent C dark) — no navy |
-| `mobile-home-functions-light.html` + `.png` | Stage + cards + rust FAB; **always-black** chrome; **Island-cleared** title |
-| `mobile-home-functions-light-sky-cta.html` + `.png` | Same clearance; FAB sky `#2d78ad` — stamp “sky/navy CTA alt — no rust” |
-| `mobile-home-functions-dark-sky-cta.html` + `.png` | Dark **charcoal** shell (`#121212` / `#1c1c1c` / `#3a3a3a`) · sky FAB · no navy |
-| `accent-options-vs-sky.html` + `.png` | Contact strip: A rust / B navy / C sky (no Field green) |
-| `accent-options.md` | Hex + Peter lock C + dark black/charcoal + theme-dot |
-| `rail-theme-dot-dark.html` + `.png` | Collapsed **charcoal** rail · « · **white** theme dot under |
-| `rail-theme-dot-light.html` + `.png` | Light main + navy rail (light OK) · « · **black** theme dot under |
-| `rail-theme-dot-pair.html` + `.png` | Labeled dark charcoal \| light pair |
-| `_mock-shared.css` | Mock-only shared chrome (not for enqueue) |
-| `icons-064/` | **0.1.64 icon polish pack** — header Add/podium/gear, ⚡ strip, color matrix; **CUT** Pipelines/Functions/Lists rail icons |
-| `icons-064/ICON-COLOR-MATRIX.md` | **UX-approved icon color matrix** (desktop/mobile light+dark, header, nav) — paint glyphs from this before Cursor |
+| [`README.md`](README.md) | Claude pack guidance (apps / CRM / Tools only) |
+| [`tokens.json`](tokens.json) | Locked token roles (rust-700 primary) |
+| [`light-tokens.md`](light-tokens.md) | Token table, Appearance default System, mobile black chrome, contrast risks |
+| [`light-tokens.css`](light-tokens.css) | CSS variables scoped `.fw-crm[data-theme="light"]` / `html.fw-crm-theme-light` — enqueue after Material/CRM CSS |
+| [`password-gate.md`](password-gate.md) | Apps-scoped password-gate notes |
 
 ## Peter locks (fold into 0.1.64+)
 
@@ -40,7 +28,7 @@ All under `/workspace/brand/fw-crm-material-theme/`:
 2. **Mobile top bar / status / safe-area (Dynamic Island): ALWAYS `#000` / `#080808` edge-to-edge**, even when app body is light **or** dark charcoal. Theme paint applies **only below** that black chrome.
 3. **Island clearance (P0):** Black chrome height ≥ `safe-area-inset-top` + title row. Title (“Falcon West” / “Energy”) and menu/search icons must sit **below** the island — use `padding-top: max(54px, calc(env(safe-area-inset-top, 47px) + 12px))` (island ~47–54px + ~8–12px nudge). **Titles must not sit under the island** or soft-blur into status. No light/charcoal bleed into the island region.
 4. **Desktop header = theme-aware:** in Light → light chrome (paper `#fcfefe` / white `#fff`, ink `rgba(8,8,8,0.87)`, borders `#dcdcdc` / `#8a8a8a`); in Dark → **black/charcoal** chrome (`#080808` / `#121212`), **not navy**. **Dark sidebar = charcoal** (`#1a1a1a` / `#121212` / `#2a2a2a`) — **no navy**. Light sidebar may remain navy `#15445D`.
-5. **Accent C locked lean:** sky `#2d78ad` for **light + dark** primary FAB/CTAs / Home tile fills (**no rust, no navy primary fills**) once dark shell matches black/charcoal. Do not ship Field green.
+5. **Accent C (optional CRM experiment):** sky `#2d78ad` FAB/CTA comps exist as a CRM paint trial. **Not Material truth.** Material primary remains rust-700 (`--md-primary`). Navy still never a button fill. Do not ship Field green.
 6. **Rail theme dot (locked):** On the collapsed sidebar margin, **directly under** the rail collapse chevron (`«`), place a small circle (10–12px) with ~44px hit target and ~8–12px gap under the chevron:
    - Dark charcoal shell → **white** dot → tap switches to light (`aria-label` / tooltip: “Switch to light”)
    - Light shell → **black** dot → tap switches to dark (“Switch to dark”)
@@ -56,7 +44,8 @@ All under `/workspace/brand/fw-crm-material-theme/`:
 | Desktop top bar | paper `#fcfefe` + ink | `#080808` / `#000` + light ink |
 | Sidebar (left nav) | navy `#15445D` (may stay on light) | charcoal `#1a1a1a` / `#121212` / `#2a2a2a` |
 | Mobile chrome | `#000000` always · height ≥ safe-area + title row | same |
-| CTA lean (C) | sky `#2d78ad` | sky `#2d78ad` FAB/ADD |
+| CTA (Material primary) | rust-700 `#a85f2e` | rust-700 (existing dark CTA) |
+| Accent C experiment (optional) | sky `#2d78ad` | sky `#2d78ad` FAB/ADD |
 | Links / Drive | `#2d78ad` (hover `#266690`) | `#5aa0cc` on charcoal (readable) |
 | PERSONAL | `#e3f1fa` / `#266690` | sky-tint on dark OK (`rgba(45,120,173,0.22)` / `#5aa0cc`) |
 | COMMERCIAL | `#15445D` / `#fff` (light) | medium gray / outline `#2a2a2a` / `#4a4a4a` — **not navy** |
@@ -69,7 +58,7 @@ All under `/workspace/brand/fw-crm-material-theme/`:
 - Sky lock `#5aa0cc` on white ≈ **2.86:1** — **fail AA** body. Prefer `#2d78ad` (~4.77:1). Keep `#5aa0cc` for **icons only on light**; OK for links on dark charcoal.
 - Muted text OK for meta only, not body.
 - Light top bar uses ink on paper. Dark charcoal uses light ink @ 0.87.
-- Rust-700 AA for labeled CTAs (~4.84:1) — legacy A only. Sky `#2d78ad` AA for Option C CTAs on white.
+- Rust-700 AA for labeled CTAs (~4.84:1) — **Material primary.** Sky `#2d78ad` AA for optional Accent C experiment CTAs on white.
 - **Don’t** use logo orange `#D2793D` for buttons.
 - **Don’t** invent Field green / `#FF5700`.
 
@@ -88,7 +77,7 @@ All under `/workspace/brand/fw-crm-material-theme/`:
 
 ## Icon polish 0.1.64 (locked)
 
-**Pack path:** `/workspace/brand/fw-crm-material-theme/icons-064/` — see `icons-064/README.md`.
+**Pack path:** CRM `icons-064/` lives with the plugin theme mocks (not in this repo). Color roles: [`README.md`](README.md) / [`tokens.json`](tokens.json).
 
 1. **Bulk bar tile order:** CSV → Clear → Lock  
 2. **Header action order:** Add → Leaderboard → Settings  
@@ -99,13 +88,13 @@ All under `/workspace/brand/fw-crm-material-theme/`:
 7. **Pipelines / Functions / Lists section icons: CUT** — do not invent funnel/sliders/bullets rail slots. Replace only glyphs that already exist.
 8. **Home Screen / PWA install icon:** **none** — do not add (Peter 2026-09-22).  
 
-**Accent C dark comps (confirmed):** `mobile-home-functions-dark-sky-cta.png`, `desktop-home-dark-sky-cta.png` (black/charcoal + sky CTA).
+**Accent C dark comps (optional experiment):** `mobile-home-functions-dark-sky-cta.png`, `desktop-home-dark-sky-cta.png` (black/charcoal + sky CTA). Not Material primary.
 
 ## Peter locks (2026-09-22 evening)
 
 - **No Home Screen / PWA install icon** — does not exist; do not add. Drop E vs quad Home Screen question. Sunrise E pack is archived/irrelevant for install.
 - **Quad mark** = **favicon + in-app logo only** (`crm-app-icon/`). Wire favicon.ico / 32 / header mark. Skip apple-touch / manifest Home Screen push unless already required elsewhere — do not introduce install-to-home.
-- **Accent C** sky `#2d78ad` for light + dark on black/charcoal shell — Developer shipping assumption after Peter skip.
+- **Accent C** sky `#2d78ad` for light + dark on black/charcoal shell — optional CRM experiment after Peter skip. **Not** a “no rust primary” Material rule; rust-700 remains `--md-primary`.
 
 ## CUT — Pipelines / Functions / Lists section icons (Peter 2026-09-22)
 

@@ -3,8 +3,10 @@
 Peter (2026-09-15): while theme/font/button CSS is moving, **audit every page** for correctness and consistency. Fonts must stay readable — not too small.
 
 ## Source of truth
-- **Living lock:** `/workspace/brand/website-design-system.md` (improved on the original 1-pager)
-- **Ancestry only:** `/workspace/brand/falcon-west-brand-guide-1pager.pdf` — Raleway ExtraBold headings + Crimson Text body + palette. It does **not** define button face, type scale floors, or Energy overrides; the website system does.
+- **Living lock (Energy production):** [`ENERGY-SITE-LOCKS.md`](ENERGY-SITE-LOCKS.md) — overrides [`DESIGN.md`](DESIGN.md) if they disagree
+- **Shared type / layout:** [`../falcon-west/DESIGN.md`](../falcon-west/DESIGN.md)
+- **Energy overlay:** [`DESIGN.md`](DESIGN.md)
+- **Ancestry only:** [`../falcon-west/brand-guide-1pager.pdf`](../falcon-west/brand-guide-1pager.pdf) and [`../assets/brand-guide/Falcon West Brand Style Guide.pdf`](../assets/brand-guide/Falcon%20West%20Brand%20Style%20Guide.pdf) — Raleway ExtraBold headings + Crimson Text body + palette. They do **not** define button face, type scale floors, or Energy overrides; the website system + ENERGY-SITE-LOCKS do.
 - Sync rule: before either site ships a version bump, ping the other so themes/plugins/playbooks match.
 
 ## Type floors (do not go under)
@@ -37,7 +39,7 @@ Headings = Raleway ExtraBold ink `#080808`. Body color `#434343`. Never Crimson 
 
 ## falconwestenergy.com (FWE) — Energy
 - **No rust/orange anywhere.**
-- Primary filled: a11y rest `#2F78A7`, hover `#266690`, white label. Kit `#3D96D2` is ideal accent; don’t use failing white-on-`#3D96D2` for small button type.
+- Primary filled: a11y rest `#2F78A7`, hover `#266690`, white label. `#3D96D2` is older decorative / logo / non-a11y fill only; don’t use failing white-on-`#3D96D2` for small button type.
 - Secondary: white fill + sky border/label — **never** blanket all `.fl-button` to primary fill.
 - Priority pages: home, captive, industries, leadership, contact/start, key landings, blog index + recent posts.
 - Dequeue CSS must primary-only after the secondary bug.

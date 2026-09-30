@@ -1,6 +1,6 @@
 # Insights publish pack
 Status: gold (meta format + checklist locked with Peter Sep 2026); HTML/footer details draft
-Owner: Writing ? design-systems writing/ (stand-alone)
+Owner: Writing ‚Üí design-systems writing/ (stand-alone)
 Sites: falconwest.com/insights/ and falconwestenergy.com/insights/
 
 ## Seven-line meta pack (always, when meta is requested)
@@ -14,13 +14,13 @@ Deliver **exactly** these seven lines and nothing else as the meta block:
 6. Photo alt text
 7. Thumbnail Ideas
 
-**Thumbnail Ideas** = one-word labels, comma-separated (e.g. `Wellhead, Kick, Pressure`). Not multi-word scene descriptions. Do not reuse the previous articleís thumbnail set by accident.
+**Thumbnail Ideas** = one-word labels, comma-separated (e.g. `Wellhead, Kick, Pressure`). Not multi-word scene descriptions. Do not reuse the previous article‚Äôs thumbnail set by accident.
 
 ## Chuck / craft publish checklist
 From [`chuck-style.md`](chuck-style.md):
 - [ ] First sentence could not appear in a carrier brochure
 - [ ] At least one named receipt (person, place, number, statute, podcast, public figure)
-- [ ] One clear reader (not ìeveryoneî)
+- [ ] One clear reader (not ‚Äúeveryone‚Äù)
 - [ ] Digression pays rent
 - [ ] No fairy-dust phrases
 - [ ] Product appears late or not at all
@@ -33,9 +33,9 @@ From [`chuck-style.md`](chuck-style.md):
 ## Structure template
 1. Cold open  
 2. Bridge (why now; one hard receipt)  
-3. Body (2ñ4 scenes)  
+3. Body (2‚Äì4 scenes)  
 4. Pattern  
-5. Do / donít  
+5. Do / don‚Äôt  
 6. Soft next step (optional)  
 7. One-line educational disclaimer  
 
@@ -45,20 +45,20 @@ From [`chuck-style.md`](chuck-style.md):
 - Soft educational CTA only; do not finish the sell in the email
 
 ## Accuracy gate
-Coverage-critical drafts: loop Insurance for a keep / fix / cut list **before** editing. Show Peter Insuranceís notes before changing the draft.
+Coverage-critical drafts: loop Insurance for a keep / fix / cut list **before** editing. Show Peter Insurance‚Äôs notes before changing the draft.
 
 ## Site ownership (as of Sep 2026)
 - Long-form and site copy drafts: Writing (this pack)
 - falconwest.com WordPress ops / paste / publish: FW
 - falconwestenergy.com WordPress ops / paste / publish: FWE
-- Paste for Peterís review before publish unless he says otherwise (especially Energy)
+- Paste for Peter‚Äôs review before publish unless he says otherwise (especially Energy)
 
 ## Contacts often used in closers (verify live before publish)
 - HQ: 5353 Mission Center Road, Suite 215, San Diego, CA 92108  
-  (Camino Del Rio letterheads are stale ó do not use)
+  (Camino Del Rio letterheads are stale ‚Äî do not use)
 - Email: hello@falconwest.com
 - Intake: https://app.falconwest.com/welcome/
-- Office phone on personal cyber page has been 619-297-9181; older Insights sometimes used 619-452-2524 ó match the live page for that product
+- Office phone on personal cyber page has been 619-297-9181; older Insights sometimes used 619-452-2524 ‚Äî match the live page for that product
 
 ## Disclaimer (default one-liner shape)
 Educational only; not advice for a specific risk or policy. Coverage depends on the forms in force. Talk with your broker before you decide.

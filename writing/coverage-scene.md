@@ -1,23 +1,23 @@
-# Coverage Scene ó copy locks
+# Coverage Scene ‚Äî copy locks
 Status: draft (Peter locked format Sep 29 2026; pin one-liners owned with FW; no live changes until he marks)
-Owner: Writing + FW ? design-systems writing/
+Owner: Writing + FW ‚Üí design-systems writing/
 Site: falconwest.com Coverage Scene hotspot modals
 
 ## Locked format
-- **One sentence per hotspot only** ó no two sections / labels
+- **One sentence per hotspot only** ‚Äî no two sections / labels
 - Solution-first skim; brief why folded into the same line
 - Vary sentence patterns
-- Lead with **them / what they need** ó not ìWe helpî on every pin
+- Lead with **them / what they need** ‚Äî not ‚ÄúWe help‚Äù on every pin
 - Love the amenity (pool, ADU, roof, trees)
-- ìif something happensî
+- ‚Äúif something happens‚Äù
 - No attractive-nuisance / exposure scare language
 - successful / accomplished language; private-client tone; not Clickable Coverage branding
 
 ## Earlier label experiments (do not ship unless Peter reopens)
-- Risk Factor / Solution ó rejected
-- Protection / Worth knowing ó superseded
-- Protects / How we help (Producer Structure A) ó superseded by one-liner lock
-- How we help / Worth knowing ó FW interim recommend; superseded by one-liner lock
+- Risk Factor / Solution ‚Äî rejected
+- Protection / Worth knowing ‚Äî superseded
+- Protects / How we help (Producer Structure A) ‚Äî superseded by one-liner lock
+- How we help / Worth knowing ‚Äî FW interim recommend; superseded by one-liner lock
 
 ## Working drafts (examples, not gold)
-Box paths if still present: `/workspace/fw-copy/coverage-scene-one-liners.md`, `coverage-scene-hotspot-blurbs-protects.md`
+Working one-liner locks live in this file. Pack index: [`README.md`](README.md).

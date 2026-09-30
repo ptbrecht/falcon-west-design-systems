@@ -32,9 +32,9 @@ Falcon West is an independent insurance brokerage. The site should feel like a l
 | `--color-navy-900` | `#15445D` | **Main brand color.** Nav, dark sections, large brand fields. Never a button fill or button border. |
 | `--color-rust-600` | `#D2793D` | **Button fill** (main brand). Filled CTA, or the border of a white outline button. Highlight / rollover accent only — never a dominant background. |
 | `--color-rust-700` | `#A85F2E` | Button hover (main brand). |
-| `--color-sky-500` | `#3D96D2` | Energy highlight / Energy button fill. On the main brand, reserved as a link-family accent — not a button, not a background. |
+| `--color-sky-500` | `#3D96D2` | Older decorative / logo / non-a11y Energy fill only. On the main brand, reserved as a link-family accent — not a button, not a background. **Not** the Energy production filled-button color. |
 | `--color-sky-600` | `#2D78AD` | Main-brand text hyperlink default. |
-| `--color-sky-700` | `#2F78A7` | Energy button hover. |
+| `--color-sky-700` | `#2F78A7` | Energy filled-button rest (a11y floor). |
 | `--color-ink-900` | `#080808` | Headings. |
 | `--color-charcoal-700` | `#434343` | Body copy. |
 | `--color-charcoal-500` | `#6B6B6B` | Muted / caption / helper. |
@@ -64,15 +64,19 @@ Sky is not a button color on the main brand. Rust is not a link color at rest �
 
 Energy shares type, spacing, components, and navy as the main brand field. Energy **never** uses rust or orange. This is a token override, not a second system.
 
+**Production Energy locks** live in [`../falcon-west-energy/ENERGY-SITE-LOCKS.md`](../falcon-west-energy/ENERGY-SITE-LOCKS.md) and win if this table disagrees. Energy-first overlay: [`../falcon-west-energy/DESIGN.md`](../falcon-west-energy/DESIGN.md).
+
 | Role | Main brand | Energy |
 |---|---|---|
-| Button fill | `#D2793D` | `#3D96D2` |
-| Button hover | `#A85F2E` | `#2F78A7` |
-| Outline button | rust border / rust label | sky border / sky label |
-| Focus border | `#D2793D` | `#3D96D2` |
-| Focus ring | `rgba(210,121,61,0.28)` | `rgba(61,150,210,0.28)` |
-| Link | `#2D78AD` / hover rust | `#2D78AD` / hover `#3D96D2` |
+| Button fill | `#D2793D` | `#2F78A7` (a11y floor) |
+| Button hover | `#A85F2E` | `#266690` |
+| Outline button | rust border / rust label | `#2F78A7` border / label |
+| Focus border | `#D2793D` | `#2F78A7` |
+| Focus ring | `rgba(210,121,61,0.28)` | `rgba(47,120,167,0.28)` |
+| Link | `#2D78AD` / hover rust | `#2D78AD` / hover `#2F78A7` |
 | Palette | navy + rust + sky accents | **black, white, and blue tones only** |
+
+`#3D96D2` is older decorative / logo / non-a11y fill only — not the production Energy filled-button color.
 
 ---
 
@@ -133,7 +137,7 @@ border: 2px solid #D2793D;
 box-shadow: 0 0 0 3px rgba(210,121,61,0.28);
 ```
 
-Energy substitutes sky / `rgba(61,150,210,0.28)`.
+Energy substitutes `#2F78A7` / `rgba(47,120,167,0.28)`.
 
 This is **not** the Material navy ring.
 
@@ -198,4 +202,4 @@ Building any of these means the website language has been broken:
 
 ## 9. Relationship to Material
 
-The app language (Material 2, retuned) lives in `material-design-language.md`. It is a working tool for professionals. This file is the public brokerage. They share a palette and a name. They do not share type roles, button geometry, focus, or shape. Do not reconcile them into one system.
+The app language (Material 2, retuned) lives in [`../material/README.md`](../material/README.md) and [`../material/tokens.json`](../material/tokens.json). It is a working tool for professionals. This file is the public brokerage. They share a palette and a name. They do not share type roles, button geometry, focus, or shape. Do not reconcile them into one system.

@@ -1,8 +1,8 @@
 # Topic whitespace and do-not-retread
-Status: draft (inventory as of Aug–Sep 2026; refresh when publishing calendar changes)
-Owner: Writing ? design-systems writing/ (stand-alone)
+Status: draft (inventory as of Augâ€“Sep 2026; refresh when publishing calendar changes)
+Owner: Writing â†’ design-systems writing/ (stand-alone)
 
-## falconwest.com — do not retread unless a new hook
+## falconwest.com â€” do not retread unless a new hook
 - CA homeowners 2026
 - HNW program design (generic)
 - AI-vs-broker
@@ -10,12 +10,12 @@ Owner: Writing ? design-systems writing/ (stand-alone)
 - Photo packets
 - Academy welcome
 
-## falconwest.com — open / useful directions (historical)
+## falconwest.com â€” open / useful directions (historical)
 - Minnesota and other non-CA personal/commercial verticals
 - Commercial vertical how-tos that are not already live
 - Advisor / Falcon Forward recaps only with real Mike quotes
 
-## falconwestenergy.com — do not retread unless a new hook
+## falconwestenergy.com â€” do not retread unless a new hook
 - Bonding explainers
 - 45Q
 - Captives
@@ -23,7 +23,7 @@ Owner: Writing ? design-systems writing/ (stand-alone)
 - Generic MSA 101
 - Control of Well / OEE (piece published Sep 2026 lane)
 
-## falconwestenergy.com — white space (open)
+## falconwestenergy.com â€” white space (open)
 - Subsea / Gulf package
 - Energy hauling
 - Equipment rental
@@ -33,6 +33,6 @@ Owner: Writing ? design-systems writing/ (stand-alone)
 - Claims handling
 - 2026 carrier appetite
 
-## Counts (snapshot — verify live)
+## Counts (snapshot â€” verify live)
 - falconwest.com Weekly Insights: ~55 posts through Jul 13 2026
 - falconwestenergy.com Insights: 18 posts through Jul 28 2026
