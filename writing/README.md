@@ -1,19 +1,25 @@
-# Writing guidelines
+# Falcon West writing guidelines
 
-Seed for Peter’s review — **not locked brand law yet.** Copy only. Do not invent extra rules here.
+Owner: Writing. Seed for Peter’s review — **not brand law** until he marks.
 
-This folder is writing, not visual language. Do not mix these files with `material/`, `falcon-west/`, or `falcon-west-energy/`.
+This folder is writing, not visual language. Do not mix these files with `material/`, `falcon-west/`, `falcon-west-energy/`, or `assets/`.
 
-| File | Lane | Site |
-|---|---|---|
-| [personal-lines.md](personal-lines.md) | Personal Lines | falconwest.com (personal / private-client pages, Coverage Scene, personal Insights, newsletter teasers) |
-| [commercial-lines.md](commercial-lines.md) | Commercial Lines | falconwest.com (commercial Insights, how-tos, industry / business pages) |
-| [energy.md](energy.md) | Energy | falconwestenergy.com (Insights, industries accordion, bonding / O&G pages) |
-| [chuck-style.md](chuck-style.md) | Insights / newsletter craft | Shared across both sites — emulate craft, not persona |
+## Pack (complete as of 2026-09-29)
 
-**Personal Lines gold standard:** *The Language of Insuring Successful Families and Individuals* (not this seed markdown).
+| File | What |
+|---|---|
+| [chuck-style.md](chuck-style.md) | Canonical Insights/newsletter craft (Chuck Yates / Old Man Coffee → Falcon West). Shared across both sites — emulate craft, not persona. |
+| [personal-lines.md](personal-lines.md) | Private-client / Coverage Scene / Chubb language / newsletter on **falconwest.com** |
+| [commercial-lines.md](commercial-lines.md) | Advisor + how-to lanes on **falconwest.com** |
+| [energy.md](energy.md) | falconwestenergy.com Jul 2026 bonding voice + accordion rules |
+
+**Personal Lines gold standard:** *The Language of Insuring Successful Families and Individuals* (prefer these over the seed markdown).
 
 - [personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals.pdf](personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals.pdf)
 - [personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals_Research_Paper.pdf](personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals_Research_Paper.pdf)
 
-Owner: Writing. Paste for Peter before treating as final brand law.
+## Explicitly not in this pack (unless Peter asks)
+
+- Visual brand / Material — those live in [`assets/`](../assets/), [`material/`](../material/), [`falcon-west/`](../falcon-west/), and [`falcon-west-energy/`](../falcon-west-energy/). Do not put brand PDFs in `writing/`.
+- Email persona (internal/client mail length and closes) — ops voice, not site design-system
+- One-off product drafts (Coverage Scene one-liners, industry dropdowns) — examples, not guidelines
