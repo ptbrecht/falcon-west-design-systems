@@ -1,5 +1,10 @@
 # Falcon West Material — Design Language Specification
 
+> **Superseded as Material truth.** Prefer the Claude pack in this folder:
+> [`tokens.json`](tokens.json), [`README.md`](README.md), [`cover.html`](cover.html),
+> [`manifest.json`](manifest.json). This file is leftover UX seed. If it disagrees
+> with those files, the Claude pack wins.
+
 A complete, image-free description of the Falcon West design language. Every value here is
 literal and buildable: hex codes, pixel dimensions, ratios, cubic-bézier curves. Nothing is
 left to interpretation, and nothing requires seeing a rendered screen.
