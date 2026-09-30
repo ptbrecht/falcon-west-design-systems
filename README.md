@@ -37,6 +37,12 @@ Locked source (Claude pack):
 
 The earlier UX `DESIGN.md` / `specimen.html` are leftover seed. **Claude’s files win** if they disagree.
 
+Also in `material/`:
+
+- [`material/PATTERNS.md`](material/PATTERNS.md) — app layout / placement locks (Developer scoring)
+- [`material/wordpress-admin-ux.md`](material/wordpress-admin-ux.md) — wp-admin Cove overlay (Tools house reference; not Material app chrome)
+- [`material/CRM-FACE.md`](material/CRM-FACE.md) — CRM as a **known Material face / theme variant** (Energy × Material, Accent C sky; **not** a fourth system)
+
 ---
 
 ## 2. `falcon-west/` — falconwest.com website system

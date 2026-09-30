@@ -37,6 +37,21 @@ placement, dialogs/sheets, forms, lists, empty/error/loading, mobile vs desktop,
 and focus/keyboard. Developer scores plugins against that file. Apps only; not
 the marketing sites.
 
+## WordPress admin (Cove overlay)
+
+wp-admin for Falcon West plugins is **not** a Material app shell. It is WordPress
+host chrome with a house overlay. House reference: Tools (`.fw-admin`, twin with
+Intake). Spec, do/don’t, and Developer checklist:
+[`wordpress-admin-ux.md`](wordpress-admin-ux.md).
+
+## CRM face (known Material variant)
+
+CRM is **not** a fourth design system. It is a documented Material **face** —
+Energy-meets-Material (Accent C sky CTAs, light + dark), still scored on
+[`PATTERNS.md`](PATTERNS.md) and Material tokens. See
+[`CRM-FACE.md`](CRM-FACE.md). Implement locks remain in
+[`HANDOFF-DEVELOPER.md`](HANDOFF-DEVELOPER.md).
+
 
 ## The three rules that get broken most
 

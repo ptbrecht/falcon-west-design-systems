@@ -8,7 +8,7 @@
 
 **Token lock:** [`tokens.json`](tokens.json) and [`README.md`](README.md) (Claude pack) win. `--md-primary` is **rust-700**. Cards are square (`0`). Navy is chrome, never a button fill. Leftover UX seed: [`DESIGN.md`](DESIGN.md) (superseded).
 
-**Accent C is optional.** Sky `#2d78ad` FAB/CTA comps in this file are a CRM paint experiment — **not** Material law. Do not treat “no rust primary” as a Material rule. Claude rust-700 remains the Material primary.
+**CRM face:** documented in [`CRM-FACE.md`](CRM-FACE.md) as a **known Material variant** (Energy × Material, Accent C sky CTAs, light + dark) — **not** a fourth design system. Placement still scores on [`PATTERNS.md`](PATTERNS.md). Claude rust-700 remains Material `--md-primary` for other apps; on the CRM face, primary actions use Accent C sky `#2d78ad` (no rust primary *on this face*).
 
 ## Paths
 
@@ -21,6 +21,9 @@ In-repo Material / CRM paint notes (this folder). Shared font: [`../fonts/Ralewa
 | [`light-tokens.md`](light-tokens.md) | Token table, Appearance default System, mobile black chrome, contrast risks |
 | [`light-tokens.css`](light-tokens.css) | CSS variables scoped `.fw-crm[data-theme="light"]` / `html.fw-crm-theme-light` — enqueue after Material/CRM CSS |
 | [`password-gate.md`](password-gate.md) | Apps-scoped password-gate notes |
+| [`CRM-FACE.md`](CRM-FACE.md) | CRM Material face / variant (not a separate system) |
+| [`wordpress-admin-ux.md`](wordpress-admin-ux.md) | wp-admin Cove overlay (Tools house reference) |
+| [`PATTERNS.md`](PATTERNS.md) | App placement locks (CRM + Tools + others) |
 
 ## Peter locks (fold into 0.1.64+)
 
