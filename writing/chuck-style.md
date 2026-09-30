@@ -1,3 +1,6 @@
+Status: gold (craft guide; Peter-approved direction Sep 2026)
+Owner: Writing → design-systems writing/ (stand-alone)
+
 # Falcon West writing guide: emulate Chuck Yates (Old Man Coffee)
 
 Source: https://collide.io/old-man-coffee (Chuck Yates / Collide).  

@@ -1,3 +1,6 @@
+Status: draft (seed from Writing locks; pending Peter mark)
+Owner: Writing → design-systems writing/ (stand-alone)
+
 # Energy — writing guidelines
 Site: falconwestenergy.com (Insights, industries accordion, bonding / O&G pages)
 

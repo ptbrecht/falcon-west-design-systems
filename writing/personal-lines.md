@@ -1,3 +1,6 @@
+Status: draft (seed from Writing locks; pending Peter mark)
+Owner: Writing → design-systems writing/ (stand-alone)
+
 # Personal Lines — writing guidelines
 Site: falconwest.com (personal / private-client pages, Coverage Scene, personal Insights, newsletter teasers)
 

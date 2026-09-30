@@ -6,7 +6,7 @@
 - **`falcon-west/`** — falconwest.com website system (rust buttons).
 - **`falcon-west-energy/`** — falconwestenergy.com (same website system; sky buttons, never rust).
 
-This repo is specs, specimens, tokens, fonts, brand-guide assets, and writing seed — no WordPress, plugin, or CRM app source.
+This repo is specs, specimens, tokens, fonts, brand-guide assets, and a writing pack — no WordPress, plugin, or CRM app source.
 
 ```
 README.md
@@ -15,7 +15,7 @@ assets/                     # updated logos + brand style guide
 material/                   # apps / CRM / Tools / serial products ONLY
 falcon-west/                # falconwest.com — rust buttons
 falcon-west-energy/         # falconwestenergy.com — sky buttons, never rust
-writing/                    # copy seed + PL gold PDFs (not visual systems)
+writing/                    # gold + draft writing pack + PL gold PDFs
 ```
 
 Shared typefaces live in [`fonts/`](fonts/).
@@ -83,20 +83,30 @@ Updated logos and the brand style guide only. No Originals, carriers, rugby, Mis
 | [`assets/logos/falcon-west/`](assets/logos/falcon-west/) | Updated Falcon West marks (PNG/JPG/favicon + Source Files) |
 | [`assets/logos/falcon-west-energy/`](assets/logos/falcon-west-energy/) | Updated Energy marks |
 | [`assets/logos/app/falcon-west-app-logo.png`](assets/logos/app/falcon-west-app-logo.png) | CRM / app quad mark (sky / white / rust / navy) |
+| [`assets/logos/app/apps-logo-mark.svg`](assets/logos/app/apps-logo-mark.svg) | App quad mark (SVG) |
+| [`assets/logos/app/apps-logo-mark-oneline.svg`](assets/logos/app/apps-logo-mark-oneline.svg) | App quad mark, one-line SVG |
+| [`assets/logos/app/collide-icon-128.png`](assets/logos/app/collide-icon-128.png) | Collide icon (Chuck-craft source reference, not a Falcon West mark) |
 | [`assets/brand-guide/Falcon West Brand Style Guide.pdf`](assets/brand-guide/Falcon%20West%20Brand%20Style%20Guide.pdf) | Brand style guide |
 
 ---
 
 ## Writing
 
-Seed for **Peter’s review** — not locked brand law yet. Lives in [`writing/`](writing/), separate from the three visual systems.
+Stand-alone pack in [`writing/`](writing/), separate from the three visual systems.
 
-| File | For |
-|---|---|
-| [`writing/personal-lines.md`](writing/personal-lines.md) | Personal Lines on **falconwest.com** |
-| [`writing/commercial-lines.md`](writing/commercial-lines.md) | Commercial Lines on **falconwest.com** |
-| [`writing/energy.md`](writing/energy.md) | Energy on **falconwestenergy.com** |
-| [`writing/chuck-style.md`](writing/chuck-style.md) | Insights / newsletter craft, shared across both sites |
+**Gold** = Peter-locked or long-standing house rule. **Draft** = Writing seed; pending Peter mark before brand law.
+
+| File | Status | For |
+|---|---|---|
+| [`writing/chuck-style.md`](writing/chuck-style.md) | **gold** | Insights / newsletter craft, shared across both sites |
+| [`writing/personal-lines.md`](writing/personal-lines.md) | draft | Personal Lines on **falconwest.com** |
+| [`writing/commercial-lines.md`](writing/commercial-lines.md) | draft | Commercial Lines on **falconwest.com** |
+| [`writing/energy.md`](writing/energy.md) | draft | Energy on **falconwestenergy.com** |
+| [`writing/email-persona.md`](writing/email-persona.md) | **gold** | Peter’s outbound email voice |
+| [`writing/insights-publish.md`](writing/insights-publish.md) | **gold** (meta + checklist); HTML contacts draft | Meta pack, checklist, newsletter, ownership |
+| [`writing/forbidden-phrases-and-locks.md`](writing/forbidden-phrases-and-locks.md) | **gold** | Never invent / fairy dust / persona / site locks |
+| [`writing/topic-whitespace.md`](writing/topic-whitespace.md) | draft | Do-not-retread + open topics |
+| [`writing/coverage-scene.md`](writing/coverage-scene.md) | draft | Coverage Scene hotspot one-liner locks |
 
 Personal Lines **gold standard** (prefer over the seed markdown):
 
