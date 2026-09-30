@@ -12,6 +12,12 @@
  *   dark chrome in Dark. Sidebar may stay navy. Not always-black on desktop.
  *
  * Not Field. Not Pylon. House Material only.
+ * Not falconwest.com / falconwestenergy.com.
+ *
+ * Claude lock: md-primary = rust-700; decorative = rust-600;
+ * navy chrome-only (never a button fill); cards shape-large 0;
+ * controls shape-small 4; menus elevation-8; focus 2px navy + 2px offset.
+ * See tokens.json + DESIGN.md.
  */
 
 @font-face {
@@ -73,7 +79,15 @@ html.fw-crm-theme-light .fwcrm-app,
 	--fwcrm-warning-bg: #faf0dc;
 	--fwcrm-danger-bg: #f7e4e0;
 
-	--fwcrm-shape: 4px;
+	--fwcrm-shape-small: 4px; /* controls */
+	--fwcrm-shape-large: 0px; /* cards, modals, app bar */
+	--fwcrm-shape: var(--fwcrm-shape-small);
+	--md-shape-small: 4px;
+	--md-shape-large: 0px;
+	--md-elevation-menu: 8;
+	--md-focus-ring-width: 2px;
+	--md-focus-ring-offset: 2px;
+	--md-focus-ring-color: #15445D;
 	--fwcrm-font: "Raleway", "Inter", system-ui, sans-serif;
 	--fwcrm-font-display: "Raleway", "Inter", system-ui, sans-serif;
 
@@ -86,8 +100,9 @@ html.fw-crm-theme-light .fwcrm-app,
 	--md-surface: #ffffff;
 	--md-surface-variant: #ececec;
 	--md-primary: #a85f2e;
+	--md-primary-decorative: #D2793D;
 	--md-on-primary: #ffffff;
-	--md-secondary: #15445D;
+	--md-secondary: #15445D; /* chrome only — never a button fill */
 	--md-on-secondary: #ffffff;
 	--md-text-high: rgba(8, 8, 8, 0.87);
 	--md-text-medium: rgba(8, 8, 8, 0.60);
@@ -162,7 +177,7 @@ html.fw-crm-theme-light .fwcrm-card,
 html.fw-crm-theme-light .fwcrm-column {
 	background: var(--fwcrm-surface);
 	border: 1px solid var(--fwcrm-line-200);
-	border-radius: var(--fwcrm-shape);
+	border-radius: var(--fwcrm-shape-large);
 	color: var(--fwcrm-text);
 }
 
@@ -178,7 +193,7 @@ html.fw-crm-theme-light .fwcrm-chip--personal {
 	display: inline-flex;
 	align-items: center;
 	padding: 2px 8px;
-	border-radius: var(--fwcrm-shape);
+	border-radius: 999px;
 	font-size: 10px;
 	font-weight: 700;
 	letter-spacing: 0.06em;
@@ -192,7 +207,7 @@ html.fw-crm-theme-light .fwcrm-chip--commercial {
 	display: inline-flex;
 	align-items: center;
 	padding: 2px 8px;
-	border-radius: var(--fwcrm-shape);
+	border-radius: 999px;
 	font-size: 10px;
 	font-weight: 700;
 	letter-spacing: 0.06em;
@@ -239,7 +254,7 @@ html.fw-crm-theme-light a:hover {
 html.fw-crm-theme-light .fwcrm-input,
 html.fw-crm-theme-light .fwcrm-select {
 	border: 1px solid var(--fwcrm-line-300);
-	border-radius: var(--fwcrm-shape);
+	border-radius: var(--fwcrm-shape-small);
 	background: var(--fwcrm-surface);
 	color: var(--fwcrm-text);
 }

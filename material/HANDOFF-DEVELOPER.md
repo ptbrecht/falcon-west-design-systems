@@ -2,8 +2,11 @@
 
 **For:** Developer (wp-plugin-falcon-west-crm)  
 **Not:** Field (scrapped). Not Pylon. House Material only.  
+**Not:** falconwest.com or falconwestenergy.com — those are separate website systems.  
 **Layout:** unchanged — **theme + colors only** (0.1.64). Home Screen icon **E** stays.  
 **In scope beyond paint:** Island padding + rail theme dot only. No Lists toggle / XDate as in-scope.
+
+**Token lock:** [`tokens.json`](tokens.json) and [`DESIGN.md`](DESIGN.md) win over any older 4px-card or navy-contained-button note in this file. Cards are square (`0`). Navy is chrome, never a button fill.
 
 ## Paths
 

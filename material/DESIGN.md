@@ -7,15 +7,26 @@ left to interpretation, and nothing requires seeing a rendered screen.
 The system is **Material Design 2**, retuned for an insurance brand. If a behavior is not
 described here, the correct answer is "whatever Material 2 specifies."
 
+**Scope — apps only.** Material is for apps, CRM, Tools, Academy gates, and other serial
+team products (`app.falconwest.com`). It does **not** cover falconwest.com or
+falconwestenergy.com. Those are separate website systems in `falcon-west/` and
+`falcon-west-energy/`. Token roles in `tokens.json` are the source of truth when this
+file and an older specimen disagree.
+
+**Locked roles (Claude pack):** `--md-primary` = rust-700; decorative = rust-600; navy is
+secondary **chrome only** (never a button fill); sky links stay sky on hover; cards /
+modals / app bar use `--shape-large` 0; controls use `--shape-small` 4; menus sit at
+elevation-8; focus is 2px navy + 2px offset; ink `#080808`; paper `#fcfefe`.
+
 ---
 
 ## 0. The one-sentence read
 
-White and near-white surfaces, square-cornered large containers, softly-rounded (4px) controls,
-rust-orange as the single action color, navy as the chrome color, Raleway throughout, and
-Material's umbra/penumbra/ambient shadow stack for depth. The intended impression is
-**slightly industrial, not friendly-rounded** — a working tool for professionals, not a
-consumer app.
+White and near-white surfaces, **square cards and large containers** (radius 0), softly-rounded
+(4px) controls, rust-orange as the single action color, navy as chrome only (never a button
+fill), Raleway throughout, and Material's umbra/penumbra/ambient shadow stack for depth. The
+intended impression is **slightly industrial, not friendly-rounded** — a working tool for
+professionals, not a consumer app or a marketing site.
 
 ---
 
@@ -35,7 +46,7 @@ consumer app.
 | `--color-sky-500` | `#3D96D2` | Info border, brand secondary accent |
 | `--color-sky-300` | `#9fcbe8` | Accent on navy (6.04:1) |
 | `--color-sky-100` | `#e3f1fa` | Info container background |
-| `--color-navy-900` | `#15445D` | **Secondary.** App bar, dark surfaces, focus ring |
+| `--color-navy-900` | `#15445D` | **Secondary chrome.** App bar, dark surfaces, focus ring. Never a button fill. |
 | `--color-navy-700` | `#1e5c7d` | Dark surface variant |
 | `--color-ink-900` | `#080808` | Text base (all text opacities derive from this) |
 | `--color-charcoal-700` | `#434343` | |
@@ -53,18 +64,20 @@ consumer app.
 ### 1.2 Role mapping
 
 ```
---md-primary            = rust-700  #a85f2e
+--md-primary            = rust-700  #a85f2e   /* text-bearing actions */
 --md-primary-variant    = rust-800  #8a4d25
 --md-primary-light      = rust-400  #e0a06e
 --md-primary-decorative = rust-600  #D2793D   /* logo orange, no-text-on-it only */
 --md-on-primary         = #ffffff
---md-secondary          = navy-900  #15445D
+--md-secondary          = navy-900  #15445D   /* chrome only — never a button fill */
 --md-secondary-variant  =           #0e3247
 --md-on-secondary       = #ffffff
 --md-background         = paper-50  #fcfefe
 --md-surface            = #ffffff
 --md-surface-variant    = line-100  #ececec
 --md-error              = danger    #b6432f
+--md-link               = sky-600   #2d78ad
+--md-link-hover         = sky-700   #266690   /* sky stays sky */
 ```
 
 ### 1.3 The rust rule — the single most important constraint
@@ -143,7 +156,7 @@ Precomputed over rust-700 `rgb(168,95,46)`:
 
 ### 1.8 Links
 
-Sky only, both states. Never rust, never navy.
+Sky only, both states. Hover stays sky (`#266690`). Never rust, never navy.
 
 ```css
 a       { color:#2d78ad; text-decoration:none }
@@ -239,15 +252,15 @@ interactive hit area. `--container-max: 1200px`.
 ### 3.2 Shape scale — the deliberate inversion
 
 ```
---shape-small   4px    controls: buttons, inputs, selects, small surfaces
---shape-medium  4px    cards
---shape-large   0px    large surfaces: modals, banners, app bar, alerts
+--shape-small   4px    controls: buttons, inputs, selects
+--shape-large   0px    cards, modals, banners, app bar, alerts
 --shape-pill    999px  chips, badges, extended FAB, switch track
 --shape-circle  50%    radio, FAB, state-layer haloes
 ```
 
 `--shape-large` being **smaller** than `--shape-small` is intentional and is the signature of
-this system: **big things are square, small things are softly rounded.** Do not normalize this.
+this system: **cards and other large surfaces are square; controls are softly rounded.** Do
+not normalize this. Do not put 4px on a card.
 
 ### 3.3 Elevation — Material's three-shadow stack
 
@@ -267,7 +280,7 @@ Each level is umbra + penumbra + ambient, all in `rgba(8,8,8,…)`:
 ```
 
 Standard assignments: card 1 (8 on hover if interactive), contained button 2 → 4 on
-hover/focus, app bar 4, FAB 6 → 8 on hover, menus/dialogs 16–24.
+hover/focus, app bar 4, FAB 6 → 8 on hover, **menus elevation-8**, dialogs 16–24.
 
 Depth is expressed by shadow only. Never by a border *and* a shadow on the same element:
 an elevated card has no border; an outlined card has `1px solid #dcdcdc` and elevation 0.
@@ -309,8 +322,9 @@ Exact measurements. All colors below are the tokens defined above.
 
 ### 5.1 Button
 
-Variants: `contained` (default), `outlined`, `text`. Aliases `primary/highlight/accent/navy/
-filled` → contained; `outline` → outlined; `ghost/link` → text.
+Variants: `contained` (default), `outlined`, `text`. Aliases `primary/highlight/accent/
+filled` → contained; `outline` → outlined; `ghost/link` → text. There is **no navy button
+variant.** Navy is chrome, not a fill.
 
 | Size | height | horizontal padding |
 |---|---|---|
@@ -321,9 +335,10 @@ filled` → contained; `outline` → outlined; `ghost/link` → text.
 Shared: `min-width: 64px`, `border-radius: 4px`, inline-flex centered, `gap: 8px` for a start
 icon, label 14/500/1.25px uppercase Raleway, `white-space: nowrap`.
 
-- **Contained** — bg `#a85f2e`, text `#ffffff`, elevation 2; hover bg `#8a4d25`, elevation 4;
-  disabled bg `rgba(8,8,8,0.12)`, text `rgba(8,8,8,0.38)`, elevation 0.
-  With `color="secondary"`: `#15445D` → `#0e3247`.
+- **Contained** — bg `#a85f2e` (rust-700 / `--md-primary`), text `#ffffff`, elevation 2;
+  hover bg `#8a4d25`, elevation 4; disabled bg `rgba(8,8,8,0.12)`, text `rgba(8,8,8,0.38)`,
+  elevation 0. **Navy is not a button fill** — do not map `color="secondary"` or a `navy`
+  alias to a contained navy button.
 - **Outlined** — transparent bg, text `#a85f2e`, **border `1px solid #a85f2e`** (the border
   bounds an interactive control, so it must clear 3:1 — never the `#dcdcdc` hairline).
   Horizontal padding reduces by 1px to compensate for the border. Hover adds
@@ -344,8 +359,8 @@ so a short label and a long one produce matched widths; alignment then uses auto
 
 ### 5.3 Card
 
-`background:#ffffff`, `border-radius: 4px`, `padding: 16px` (or 0 when unpadded),
-`color: rgba(8,8,8,0.87)`, shadow transition 250ms standard.
+`background:#ffffff`, `border-radius: 0` (`--shape-large`), `padding: 16px` (or 0 when
+unpadded), `color: rgba(8,8,8,0.87)`, shadow transition 250ms standard.
 - `elevated` (default): elevation 1, no border. `interactive` raises to elevation 8 on hover.
 - `outlined`: `1px solid #dcdcdc`, elevation 0.
 
@@ -458,9 +473,10 @@ inactive `rgba(8,8,8,0.6)`. Hover layer `rgba(168,95,46,0.04)`. `fullWidth` give
 
 ### 5.15 Accordion
 
-Each item is a `#ffffff` surface at elevation 1, radius 0, no margin when collapsed.
-When open it lifts to elevation 2, gains `border-radius: 4px` and `margin: 16px 0` —
-both transitioning over 250ms standard. That vertical separation *is* the open affordance.
+Each item is a `#ffffff` surface at elevation 1, **radius 0** (same as cards), no margin
+when collapsed. When open it lifts to elevation 2 and gains `margin: 16px 0` — transitioning
+over 250ms standard. That vertical separation *is* the open affordance. Do not round the
+open panel.
 Header: full width, `min-height: 48px`, `padding: 12px 24px`, subtitle1 (16/500/0.15px),
 space-between, hover layer `rgba(8,8,8,0.06)`. Caret is a CSS triangle
 (`border-left/right: 5px transparent; border-top: 6px solid rgba(8,8,8,0.6)`) rotating
@@ -481,9 +497,10 @@ space-between, hover layer `rgba(8,8,8,0.06)`. Caret is a CSS triangle
    figure/ground separation on light screens — do not flatten them to the same white.
 6. **Sticky action bars.** In tool-style screens, the primary action row stays pinned to the
    bottom of its container so it survives short viewports.
-7. **Navy is chrome, rust is action.** Navy fills the app bar and dark bands; rust marks the
-   one thing the user should do next on a given screen. More than one contained rust button
-   visible at once means the hierarchy is wrong.
+7. **Navy is chrome, rust is action.** Navy fills the app bar and dark bands — **never a
+   button fill or button border.** Rust-700 marks the one thing the user should do next on a
+   given screen. More than one contained rust button visible at once means the hierarchy is
+   wrong.
 
 ---
 
@@ -509,16 +526,17 @@ Building any of these means the design language has been broken:
 
 1. White (or any) text on `#D2793D`.
 2. `#D2793D` anywhere on a navy surface.
-3. Rounding large surfaces (modals, banners, app bar, alerts) — they are square, radius 0.
+3. Rounding cards, modals, banners, app bar, or alerts — they are square, `--shape-large` 0.
 4. Rounding controls past 4px (except intentionally-pill chips, badges, extended FABs).
-5. A decorative `#dcdcdc` hairline bounding an input, select, or outlined button.
-6. Body copy at `--md-text-medium` (0.6 opacity).
-7. Rust or navy links — links are sky, in both states.
-8. A tint or background wash used as a focus indicator instead of the 2px navy ring.
-9. Border *and* shadow on the same surface.
-10. Any font other than Raleway in application chrome; Crimson Text outside editorial prose.
-11. New one-off colors. If a screen needs a color, it exists in §1 or it is not needed.
-12. Re-pointing the deprecated aliases (`--brand-primary` etc.). `--brand-primary` means
+5. Navy as a button fill (contained, outlined, or text). Navy is chrome only.
+6. A decorative `#dcdcdc` hairline bounding an input, select, or outlined button.
+7. Body copy at `--md-text-medium` (0.6 opacity).
+8. Rust or navy links — links are sky, in both states (hover stays sky).
+9. A tint or background wash used as a focus indicator instead of the 2px navy ring.
+10. Border *and* shadow on the same surface.
+11. Any font other than Raleway in application chrome; Crimson Text outside editorial prose.
+12. New one-off colors. If a screen needs a color, it exists in §1 or it is not needed.
+13. Re-pointing the deprecated aliases (`--brand-primary` etc.). `--brand-primary` means
     **navy**; flipping it to `--md-primary` would silently turn every navy surface orange.
     Migrate consumers to the `md-*` roles explicitly instead. These aliases are removed
     after **2027-02-01**.

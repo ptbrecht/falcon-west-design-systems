@@ -1,42 +1,49 @@
 # Falcon West design systems
 
-Three separate design systems. **Do not mix them.** Do not invent tokens. This repo is specs, specimens, CSS tokens, fonts, and brand-guide assets only — no WordPress, plugin, or CRM app source.
+**Three separate systems.** Do not mix them. Do not invent tokens. Material does **not** cover the marketing sites.
+
+This repo is specs, specimens, CSS/JSON tokens, fonts, and brand-guide assets only — no WordPress, plugin, or CRM app source.
 
 ```
 README.md
 fonts/                      # shared Raleway + Crimson Text
-material/                   # Falcon West Material
-falcon-west/                # falconwest.com brokerage site
-falcon-west-energy/         # falconwestenergy.com
+material/                   # apps / CRM / Tools / serial products ONLY
+falcon-west/                # falconwest.com — rust buttons
+falcon-west-energy/         # falconwestenergy.com — sky buttons, never rust
 ```
 
 Shared typefaces live in [`fonts/`](fonts/). Specimens that reference `fonts/` locally expect those files next to the HTML; use this folder as the source of truth.
 
 ---
 
-## 1. `material/` — Falcon West Material
+## 1. `material/` — Falcon West Material (apps only)
 
-Material Design 2 retuned for insurance: paper surfaces, rust-700 text-bearing actions, navy chrome, Raleway, ink `#080808` (never `#000000`).
+Material Design 2 retuned for insurance tools. **Scope lock: apps, CRM, Tools, Academy gates, and other serial products** (`app.falconwest.com`). **Not** falconwest.com. **Not** falconwestenergy.com.
 
-- White and near-white (paper-50) surfaces
-- Square large containers; 4px controls
-- **Rust-700 `#a85f2e`** is the only rust legal on a fill that carries a text label
-- Logo orange rust-600 `#D2793D` is decorative only — it fails 4.5:1 for text
-- Navy `#15445D` is chrome (app bar, dark surfaces, focus), not a marketing brand field
-- Raleway throughout
+Token roles (Claude pack — source of truth in [`material/tokens.json`](material/tokens.json)):
 
-**Use on** apps, CRM, Tools, Academy gates, and other serial team products (`app.falconwest.com`). **Not** marketing sites.
+- `--md-primary` = rust-700 `#a85f2e` (text-bearing actions)
+- `--md-primary-decorative` = rust-600 `#D2793D` (logo orange, decorative only)
+- `--md-secondary` = navy `#15445D` — **chrome only, never a button fill**
+- Sky links stay sky on hover (`#2d78ad` → `#266690`)
+- `--shape-large` **0** for cards, modals, app bar
+- `--shape-small` **4** for controls
+- Menus at elevation-8
+- Focus: 2px navy + 2px offset
+- Ink `#080808` · paper `#fcfefe`
 
-Start here: [`material/DESIGN.md`](material/DESIGN.md) · [`material/specimen.html`](material/specimen.html) · [`material/light-tokens.css`](material/light-tokens.css)
+Do not apply Material type roles, focus, casing, or shape to the website folders.
+
+Start here: [`material/DESIGN.md`](material/DESIGN.md) · [`material/tokens.json`](material/tokens.json) · [`material/specimen.html`](material/specimen.html)
 
 ---
 
 ## 2. `falcon-west/` — falconwest.com website system
 
-The brokerage marketing site. **Separate from Material.** Do not apply Material type roles, focus, casing, or shape inversion.
+The brokerage marketing site. **A separate system from Material.**
 
 - Navy `#15445D` is the brand field (nav, dark sections) — never a button fill or button border
-- Rust `#D2793D` is the button color (hover `#A85F2E`)
+- **Rust `#D2793D` buttons** (hover `#A85F2E`)
 - Sky `#2D78AD` / `#3D96D2` is for text links, not buttons
 - Crimson Text for editorial; Raleway for the wordmark and UI chrome
 
@@ -48,10 +55,10 @@ Start here: [`falcon-west/DESIGN.md`](falcon-west/DESIGN.md) · [`falcon-west/sp
 
 ## 3. `falcon-west-energy/` — falconwestenergy.com
 
-The same website system as Falcon West, with sky as the action color. **Never rust or orange.** Palette is black, white, and blue tones only.
+The same website system as Falcon West, with **sky as the action color**. **Never rust or orange.** Palette is black, white, and blue tones only.
 
 - Navy remains the brand field
-- Button fill `#3D96D2`, hover `#2F78A7`
+- **Sky buttons:** fill `#3D96D2`, hover `#2F78A7`
 - Links stay sky; hover is sky, not rust
 - Type, spacing, and components match the website system — this is a token override, not a second language
 
@@ -64,5 +71,7 @@ Start here: [`falcon-west-energy/DESIGN.md`](falcon-west-energy/DESIGN.md) (§2.
 | Surface | System |
 |---|---|
 | app.falconwest.com, CRM, Tools, Academy gates, serial products | **Material** |
-| falconwest.com | **Falcon West** website |
-| falconwestenergy.com | **Falcon West Energy** website (sky override) |
+| falconwest.com | **Falcon West** website (rust buttons) |
+| falconwestenergy.com | **Falcon West Energy** website (sky buttons, never rust) |
+
+Material never owns the two marketing domains. The two website folders never inherit Material card radius, navy-as-primary, or uppercase 14/500 buttons.

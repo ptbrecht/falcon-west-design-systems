@@ -74,8 +74,10 @@ Do **not** keep navy on the desktop top bar in Light. Do **not** invent always-b
 | mobile status / safe-area / top bar | `--fwcrm-mobile-chrome` | `#000000` (always) |
 | CTA fill (labeled) | `--md-primary` rust-700 | `#a85f2e` |
 | CTA / on-primary text | `--md-on-primary` | `#ffffff` |
+| decorative / logo orange | `--md-primary-decorative` rust-600 | `#D2793D` — never text-bearing |
+| navy chrome | `--md-secondary` | `#15445D` — **never a button fill** |
 | links / Drive (prefer) | `--md-link` sky-600 | `#2d78ad` |
-| links hover | `--md-link-hover` sky-700 | `#266690` |
+| links hover | `--md-link-hover` sky-700 | `#266690` — sky stays sky |
 | lock-link (legacy dark) | `--md-link-lock` | `#5aa0cc` — see note |
 | PERSONAL chip | bg / text | `#e3f1fa` / `#266690` |
 | COMMERCIAL chip | bg / text | `#15445D` / `#ffffff` |
@@ -85,8 +87,9 @@ Do **not** keep navy on the desktop top bar in Light. Do **not** invent always-b
 | drag highlight | rust-100 | `#fbe9db` |
 | logo orange | rust-600 | `#D2793D` — **decorative only**, never text-bearing fill |
 
-**Font:** Raleway (UI + display). Fallback: Inter / system-ui. Local: `Raleway.ttf` in this folder.  
-**Radii:** page/large surfaces square where Material says; controls/cards **4px**.
+**Font:** Raleway (UI + display). Fallback: Inter / system-ui. Shared: [`../fonts/Raleway.ttf`](../fonts/Raleway.ttf).  
+**Radii (Claude lock):** `--shape-large` **0** for cards / modals / app bar; `--shape-small` **4px** for controls. Menus at elevation-8. Focus: 2px navy + 2px offset.  
+**Source of truth:** [`tokens.json`](tokens.json) + [`DESIGN.md`](DESIGN.md).
 
 ---
 
@@ -144,5 +147,6 @@ For System: set `data-theme` from `matchMedia('(prefers-color-scheme: light)')` 
 - Mobile status/safe-area/top bar = **always `#000`**, light paint only below.
 - Desktop header = **theme-aware**: light chrome in Light; dark chrome in Dark. Sidebar may stay navy. Not always-black on desktop.
 - No Field forest / Field orange `#FF5700`. No inventing Field green.
-- Navy never a CTA fill; rust-700 only labeled primary.
+- Navy never a CTA / button fill; rust-700 only labeled primary.
 - Logo orange never on buttons with text.
+- Cards are square (`0`). Controls are `4px`. Do not use the old 4px-card rule.

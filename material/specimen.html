@@ -93,10 +93,10 @@
   h2 { font-size: 20px; font-weight: 500; letter-spacing: 0.15px; line-height: 1.30; margin-bottom: 16px; }
   h6 { font-size: 20px; font-weight: 500; letter-spacing: 0.15px; }
 
-  /* Cards — 4px, elev 1, no border */
+  /* Cards — shape-large 0, elev 1, no border */
   .card {
     background: var(--color-white);
-    border-radius: 4px;
+    border-radius: 0;
     padding: 16px;
     box-shadow: var(--elev-1);
     color: var(--text-high);
@@ -153,7 +153,6 @@
     background: var(--color-rust-700); color: #fff;
     box-shadow: var(--elev-2);
   }
-  .btn-contained.navy { background: var(--color-navy-900); }
   .btn-outlined {
     background: transparent; color: var(--color-rust-700);
     border: 1px solid var(--color-rust-700);
@@ -262,7 +261,7 @@
   .t-ov { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-rust-700); }
 
   .wrong-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .demo-box { padding: 16px; border-radius: 4px; }
+  .demo-box { padding: 16px; border-radius: 0; }
   .demo-box.bad { background: #f7e4e0; }
   .demo-box.good { background: #e7f2e9; }
   .fake-btn-bad {
@@ -299,7 +298,7 @@
   <main class="page">
     <p class="eyebrow">The one-sentence read</p>
     <h1>Slightly industrial,<br>not friendly-rounded.</h1>
-    <p class="lede">White and near-white surfaces. Square large containers. Softly-rounded 4px controls. Rust-orange as the single action color. Navy as chrome. Raleway throughout. A working tool for professionals, not a consumer app.</p>
+    <p class="lede">White and near-white surfaces. Square cards and large containers (radius 0). Softly-rounded 4px controls. Rust-700 as the single action color. Navy as chrome — never a button fill. Raleway throughout. Apps and serial products only, not the marketing sites.</p>
 
     <section>
       <h2>Color — navy is chrome, rust is action</h2>
@@ -352,7 +351,7 @@
         <div class="card">
           <div class="shape-demo">
             <div>
-              <div class="big-sq">App bar · alert · modal</div>
+              <div class="big-sq">Card · app bar · alert · modal</div>
               <p class="muted" style="margin-top:8px">Large surfaces · radius 0</p>
             </div>
             <div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px">
@@ -360,7 +359,7 @@
               <p class="muted">Controls · radius 4</p>
             </div>
           </div>
-          <p class="t-body" style="margin-top:16px">Big things are square. Small things are softly rounded. Do not normalize this. It is the signature of the system.</p>
+          <p class="t-body" style="margin-top:16px">Cards are square. Controls are 4px. Do not normalize this. It is the signature of the system.</p>
         </div>
       </section>
     </div>
@@ -375,10 +374,10 @@
             <button class="btn btn-outlined">Save draft</button>
             <button class="btn btn-contained">Bind policy</button>
           </div>
-          <p class="muted" style="margin-top:12px">Contained rust, outlined rust, text rust. Focus is 2px navy, 2px offset.</p>
+          <p class="muted" style="margin-top:12px">Contained rust, outlined rust, text rust. Navy is chrome, not a button. Focus is 2px navy, 2px offset.</p>
           <div class="btn-row" style="margin-top:16px">
             <button class="btn btn-contained focus">Focus</button>
-            <button class="btn btn-contained navy">Secondary</button>
+            <button class="btn btn-outlined">Outlined</button>
           </div>
         </div>
 
@@ -426,7 +425,7 @@
           <div class="alert-icon">!</div>
           <div>
             <div class="alert-title">Broken</div>
-            <div class="alert-body" style="margin-bottom:12px">White text on #D2793D. Logo orange on navy. Rounded app bars. Hairline borders on inputs. Rust links. Body at 60% opacity.</div>
+            <div class="alert-body" style="margin-bottom:12px">White text on #D2793D. Logo orange on navy. Rounded cards. Navy button fills. Hairline borders on inputs. Rust links. Body at 60% opacity.</div>
             <div class="fake-btn-bad">Get a quote</div>
           </div>
         </div>
@@ -434,7 +433,7 @@
           <div class="alert-icon" style="background:#3f7d4a">✓</div>
           <div>
             <div class="alert-title">On-spec</div>
-            <div class="alert-body" style="margin-bottom:12px">Label sits on rust-700. Navy is chrome only. Large surfaces stay square. Links stay sky. One contained rust button per screen.</div>
+            <div class="alert-body" style="margin-bottom:12px">Label sits on rust-700. Navy is chrome only — never a button fill. Cards stay square. Links stay sky on hover. One contained rust button per screen.</div>
             <button class="btn btn-contained">Get a quote</button>
           </div>
         </div>

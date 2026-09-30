@@ -1,6 +1,6 @@
 # Falcon West Energy — falconwestenergy.com
 
-Same website system as Falcon West, with **sky as the action color**. Never rust or orange.
+Same website system as Falcon West, with **sky as the action color**. Never rust or orange. **Not** Material — do not apply Material tokens or square-card/app-bar rules here.
 
 | File | Role |
 |---|---|
