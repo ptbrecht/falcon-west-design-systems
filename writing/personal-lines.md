@@ -1,6 +1,13 @@
 # Personal Lines — writing guidelines
 Site: falconwest.com (personal / private-client pages, Coverage Scene, personal Insights, newsletter teasers)
 
+**Gold standard** for this lane — *The Language of Insuring Successful Families and Individuals*:
+
+- [The_Language_of_Insuring_Successful_Families_and_Individuals.pdf](personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals.pdf)
+- [The_Language_of_Insuring_Successful_Families_and_Individuals_Research_Paper.pdf](personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals_Research_Paper.pdf)
+
+Prefer those PDFs when this seed and the papers disagree.
+
 ## Reader
 Successful / accomplished homeowners and families — not “affluent” or “high net worth” on skim UI. One reader in the room (the homeowner wiring closing funds, the family with a pool and an ADU).
 

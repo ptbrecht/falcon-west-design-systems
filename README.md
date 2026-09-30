@@ -11,10 +11,11 @@ This repo is specs, specimens, tokens, fonts, brand-guide assets, and writing se
 ```
 README.md
 fonts/                      # shared Raleway + Crimson Text
+assets/                     # updated logos + brand style guide
 material/                   # apps / CRM / Tools / serial products ONLY
 falcon-west/                # falconwest.com — rust buttons
 falcon-west-energy/         # falconwestenergy.com — sky buttons, never rust
-writing/                    # copy seed for Peter’s review (not visual systems)
+writing/                    # copy seed + PL gold PDFs (not visual systems)
 ```
 
 Shared typefaces live in [`fonts/`](fonts/).
@@ -73,6 +74,19 @@ Start here: [`falcon-west-energy/DESIGN.md`](falcon-west-energy/DESIGN.md) · [`
 
 ---
 
+## Assets
+
+Updated logos and the brand style guide only. No Originals, carriers, rugby, Misprint/Wingman fonts, or letterhead.
+
+| Path | What |
+|---|---|
+| [`assets/logos/falcon-west/`](assets/logos/falcon-west/) | Updated Falcon West marks (PNG/JPG/favicon + Source Files) |
+| [`assets/logos/falcon-west-energy/`](assets/logos/falcon-west-energy/) | Updated Energy marks |
+| [`assets/logos/app/falcon-west-app-logo.png`](assets/logos/app/falcon-west-app-logo.png) | CRM / app quad mark (sky / white / rust / navy) |
+| [`assets/brand-guide/Falcon West Brand Style Guide.pdf`](assets/brand-guide/Falcon%20West%20Brand%20Style%20Guide.pdf) | Brand style guide |
+
+---
+
 ## Writing
 
 Seed for **Peter’s review** — not locked brand law yet. Lives in [`writing/`](writing/), separate from the three visual systems.
@@ -83,3 +97,8 @@ Seed for **Peter’s review** — not locked brand law yet. Lives in [`writing/`
 | [`writing/commercial-lines.md`](writing/commercial-lines.md) | Commercial Lines on **falconwest.com** |
 | [`writing/energy.md`](writing/energy.md) | Energy on **falconwestenergy.com** |
 | [`writing/chuck-style.md`](writing/chuck-style.md) | Insights / newsletter craft, shared across both sites |
+
+Personal Lines **gold standard** (prefer over the seed markdown):
+
+- [`writing/personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals.pdf`](writing/personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals.pdf)
+- [`writing/personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals_Research_Paper.pdf`](writing/personal-lines/The_Language_of_Insuring_Successful_Families_and_Individuals_Research_Paper.pdf)
