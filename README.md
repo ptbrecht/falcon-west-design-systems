@@ -6,7 +6,7 @@
 - **`falcon-west/`** — falconwest.com website system (rust buttons).
 - **`falcon-west-energy/`** — falconwestenergy.com (same website system; sky buttons, never rust).
 
-This repo is specs, specimens, tokens, fonts, and brand-guide assets only — no WordPress, plugin, or CRM app source.
+This repo is specs, specimens, tokens, fonts, brand-guide assets, and writing seed — no WordPress, plugin, or CRM app source.
 
 ```
 README.md
@@ -14,6 +14,7 @@ fonts/                      # shared Raleway + Crimson Text
 material/                   # apps / CRM / Tools / serial products ONLY
 falcon-west/                # falconwest.com — rust buttons
 falcon-west-energy/         # falconwestenergy.com — sky buttons, never rust
+writing/                    # copy seed for Peter’s review (not visual systems)
 ```
 
 Shared typefaces live in [`fonts/`](fonts/).
@@ -69,3 +70,16 @@ Start here: [`falcon-west-energy/DESIGN.md`](falcon-west-energy/DESIGN.md) · [`
 | app.falconwest.com, CRM, Tools, Academy gates, serial products | **Material** |
 | falconwest.com | **Falcon West** website (rust buttons) |
 | falconwestenergy.com | **Falcon West Energy** website (sky buttons, never rust) |
+
+---
+
+## Writing
+
+Seed for **Peter’s review** — not locked brand law yet. Lives in [`writing/`](writing/), separate from the three visual systems.
+
+| File | For |
+|---|---|
+| [`writing/personal-lines.md`](writing/personal-lines.md) | Personal Lines on **falconwest.com** |
+| [`writing/commercial-lines.md`](writing/commercial-lines.md) | Commercial Lines on **falconwest.com** |
+| [`writing/energy.md`](writing/energy.md) | Energy on **falconwestenergy.com** |
+| [`writing/chuck-style.md`](writing/chuck-style.md) | Insights / newsletter craft, shared across both sites |
