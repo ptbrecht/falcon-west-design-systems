@@ -29,6 +29,15 @@ The stylesheet is **tokens only** — there are no component classes in it. This
 system is the reference for those tokens; the plugin remains the shipping source
 of truth.
 
+## Layout & placement patterns
+
+Tokens answer *what it looks like*. **Where things go** is locked in
+[`PATTERNS.md`](PATTERNS.md) — page chrome, close/dismiss, primary action
+placement, dialogs/sheets, forms, lists, empty/error/loading, mobile vs desktop,
+and focus/keyboard. Developer scores plugins against that file. Apps only; not
+the marketing sites.
+
+
 ## The three rules that get broken most
 
 **1. The logo orange cannot carry text.** `color-rust-600` (#d2793d) is the mark's
@@ -255,6 +264,7 @@ West mark — where a logo would go, use plain type and a note.
 **Components.** No component bundle. A separate handoff bundle
 (`design_handoff_falcon_west_wordpress`) holds 15 React reference components; the
 plan is to port it into mu-core as a CSS component layer plus PHP render helpers.
-Until that lands, this system is tokens and guidance.
+Until that lands, this system is tokens, placement patterns
+([`PATTERNS.md`](PATTERNS.md)), and guidance.
 
 **A dark theme**, as described above.
