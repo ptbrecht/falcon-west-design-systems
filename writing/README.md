@@ -14,7 +14,7 @@ This folder is writing, not visual language. Do not mix these files with `materi
 | [commercial-lines.md](commercial-lines.md) | draft | Commercial lanes on **falconwest.com** |
 | [energy.md](energy.md) | draft | falconwestenergy.com voice + accordion |
 | [email-persona.md](email-persona.md) | **gold** | Peter’s outbound email voice |
-| [insights-publish.md](insights-publish.md) | **gold** (meta + checklist); HTML contacts draft | Meta pack, checklist, newsletter, ownership, disclaimer shape |
+| [insights-publish.md](insights-publish.md) | **gold** (meta + checklist + hr dividers); HTML contacts draft | Meta pack, checklist, newsletter, ownership, disclaimer, `<hr />` between sections |
 | [forbidden-phrases-and-locks.md](forbidden-phrases-and-locks.md) | **gold** | Never invent / fairy dust / persona / site locks |
 | [topic-whitespace.md](topic-whitespace.md) | draft | Do-not-retread + open topics (refresh often) |
 | [coverage-scene.md](coverage-scene.md) | draft | Hotspot one-liner locks |

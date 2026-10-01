@@ -1,5 +1,5 @@
 # Insights publish pack
-Status: gold (meta format + checklist locked with Peter Sep 2026); HTML/footer details draft
+Status: gold (meta format + checklist + hr dividers locked with Peter); HTML/footer details draft
 Owner: Writing → design-systems writing/ (stand-alone)
 Sites: falconwest.com/insights/ and falconwestenergy.com/insights/
 
@@ -63,3 +63,11 @@ Coverage-critical drafts: loop Insurance for a keep / fix / cut list **before** 
 ## Disclaimer (default one-liner shape)
 Educational only; not advice for a specific risk or policy. Coverage depends on the forms in force. Talk with your broker before you decide.
 (Tune per piece; never invent legal language.)
+
+## HTML section dividers (falconwest.com — gold, 2026-10-01)
+Peter lock via FW: put `<hr />` between **all** sections in long-form Insights HTML, matching the nanny / household workers’ comp article:
+- After the top disclaimer callout (if present)
+- Between every H2 section
+- Before FAQ (and between FAQ and prior section)
+
+Bake into every WordPress HTML draft. Do not leave Peter inserting dividers by hand.
