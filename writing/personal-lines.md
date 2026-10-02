@@ -44,3 +44,6 @@ Successful / accomplished homeowners and families — not “affluent” or “h
 
 ## Do not retread (unless new hook)
 CA homeowners 2026, HNW program design, AI-vs-broker, water mitigation, photo packets, Academy welcome — unless extending with a new angle.
+
+## Idea source (Peter lock, 2026-10-01)
+Use https://www.privateclientselect.com/ as an idea source for private-client topics, framing, and coverage angles. Steal useful ideas only. Write in Falcon West voice (successful/accomplished, protection-first). Do not copy their brand, layout, or claims as Falcon West facts.

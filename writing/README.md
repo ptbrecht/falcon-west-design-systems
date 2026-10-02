@@ -18,6 +18,7 @@ This folder is writing, not visual language. Do not mix these files with `materi
 | [forbidden-phrases-and-locks.md](forbidden-phrases-and-locks.md) | **gold** | Never invent / fairy dust / persona / site locks |
 | [topic-whitespace.md](topic-whitespace.md) | draft | Do-not-retread + open topics (refresh often) |
 | [coverage-scene.md](coverage-scene.md) | draft | Hotspot one-liner locks |
+| [private-client-select-ideas.md](private-client-select-ideas.md) | draft | Idea extraction from privateclientselect.com for private-client topics (FW voice only) |
 
 **Personal Lines gold standard:** *The Language of Insuring Successful Families and Individuals* (prefer these over the seed markdown).
 
@@ -31,4 +32,4 @@ This folder is writing, not visual language. Do not mix these files with `materi
 
 ## Sync note
 
-Prefer **this pack** as the writing source of truth in the repo. Mapped from Writing’s numbered files (`00`–`08`) to dest names above.
+Prefer **this pack** as the writing source of truth in the repo. Mapped from Writing’s numbered files (`00`–`09`) to dest names above.
