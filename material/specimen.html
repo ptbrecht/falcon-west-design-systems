@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Falcon West Material — Specimen</title>
+<style>
+  @font-face {
+    font-family: "Raleway";
+    src: url("fonts/Raleway.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --color-rust-800: #8a4d25;
+    --color-rust-700: #a85f2e;
+    --color-rust-600: #D2793D;
+    --color-rust-400: #e0a06e;
+    --color-rust-100: #fbe9db;
+    --color-sky-700: #266690;
+    --color-sky-600: #2d78ad;
+    --color-sky-500: #3D96D2;
+    --color-sky-100: #e3f1fa;
+    --color-navy-900: #15445D;
+    --color-navy-deep: #0e3247;
+    --color-ink-900: #080808;
+    --color-line-300: #8a8a8a;
+    --color-line-200: #dcdcdc;
+    --color-line-100: #ececec;
+    --color-paper-50: #fcfefe;
+    --color-white: #ffffff;
+    --color-success: #3f7d4a;
+    --color-warning: #8a5e10;
+    --color-danger: #b6432f;
+    --text-high: rgba(8,8,8,0.87);
+    --text-medium: rgba(8,8,8,0.60);
+    --font: "Raleway", sans-serif;
+    --elev-1: 0 2px 1px -1px rgba(8,8,8,.20), 0 1px 1px 0 rgba(8,8,8,.14), 0 1px 3px 0 rgba(8,8,8,.12);
+    --elev-2: 0 3px 1px -2px rgba(8,8,8,.20), 0 2px 2px 0 rgba(8,8,8,.14), 0 1px 5px 0 rgba(8,8,8,.12);
+    --elev-4: 0 2px 4px -1px rgba(8,8,8,.20), 0 4px 5px 0 rgba(8,8,8,.14), 0 1px 10px 0 rgba(8,8,8,.12);
+    --elev-6: 0 3px 5px -1px rgba(8,8,8,.20), 0 6px 10px 0 rgba(8,8,8,.14), 0 1px 18px 0 rgba(8,8,8,.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--color-paper-50); }
+  body {
+    width: 1440px;
+    font-family: var(--font);
+    color: var(--text-high);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* App bar — large surface, radius 0, navy chrome, elev 4 */
+  .appbar {
+    height: 64px;
+    background: var(--color-navy-900);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 16px;
+    box-shadow: var(--elev-4);
+    position: relative;
+    z-index: 2;
+  }
+  .mark {
+    width: 32px; height: 32px;
+    background: var(--color-rust-600);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mark svg { display: block; }
+  .appbar-title { font-size: 20px; font-weight: 500; letter-spacing: 0.15px; flex: 1; }
+  .appbar-meta { font-size: 12px; font-weight: 400; letter-spacing: 0.4px; color: rgba(255,255,255,0.7); }
+
+  .page { padding: 48px 64px 64px; max-width: 1440px; }
+
+  .eyebrow {
+    font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--color-rust-700);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 64px; font-weight: 400; letter-spacing: -1px; line-height: 1.10;
+    margin-bottom: 16px;
+  }
+  .lede {
+    font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.50;
+    max-width: 720px; margin-bottom: 48px;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 20px; font-weight: 500; letter-spacing: 0.15px; line-height: 1.30; margin-bottom: 16px; }
+  h6 { font-size: 20px; font-weight: 500; letter-spacing: 0.15px; }
+
+  /* Cards — shape-large 0, elev 1, no border */
+  .card {
+    background: var(--color-white);
+    border-radius: 0;
+    padding: 16px;
+    box-shadow: var(--elev-1);
+    color: var(--text-high);
+  }
+  .card.outlined {
+    box-shadow: none;
+    border: 1px solid var(--color-line-200);
+  }
+
+  /* Swatches */
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .swatch { border-radius: 4px; overflow: hidden; background: var(--color-white); box-shadow: var(--elev-1); }
+  .swatch .chip { height: 72px; }
+  .swatch .meta { padding: 12px; }
+  .swatch .name { font-size: 12px; font-weight: 500; letter-spacing: 0.4px; }
+  .swatch .hex { font-size: 12px; color: var(--text-medium); letter-spacing: 0.4px; margin-top: 4px; }
+  .swatch .role { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 8px; color: var(--color-rust-700); }
+
+  /* Brand alert — large shape = 0 radius, 4px left border */
+  .alert {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 16px;
+    border-radius: 0;
+    background: #fbe9db;
+    border-left: 4px solid #D2793D;
+    color: #8a4d25;
+    margin-top: 16px;
+  }
+  .alert-icon {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: #D2793D; color: #fff;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px; flex-shrink: 0;
+  }
+  .alert-title { font-size: 14px; font-weight: 500; letter-spacing: 0.1px; margin-bottom: 4px; }
+  .alert-body { font-size: 14px; font-weight: 400; letter-spacing: 0.25px; line-height: 1.43; }
+
+  .alert.info { background: #e3f1fa; border-left-color: #3D96D2; color: #266690; }
+  .alert.info .alert-icon { background: #3D96D2; }
+  .alert.danger { background: #f7e4e0; border-left-color: #b6432f; color: #8f3323; }
+  .alert.danger .alert-icon { background: #b6432f; }
+
+  /* Buttons */
+  .btn {
+    height: 36px; padding: 0 16px; min-width: 64px;
+    border-radius: 4px; border: 0;
+    font-family: var(--font); font-size: 14px; font-weight: 500;
+    letter-spacing: 1.25px; text-transform: uppercase;
+    display: inline-flex; align-items: center; justify-content: center;
+    white-space: nowrap; cursor: default;
+  }
+  .btn-contained {
+    background: var(--color-rust-700); color: #fff;
+    box-shadow: var(--elev-2);
+  }
+  .btn-outlined {
+    background: transparent; color: var(--color-rust-700);
+    border: 1px solid var(--color-rust-700);
+    padding: 0 15px;
+  }
+  .btn-text {
+    background: transparent; color: var(--color-rust-700);
+    padding: 0 8px;
+  }
+  .btn-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .btn.focus {
+    outline: 2px solid #15445D;
+    outline-offset: 2px;
+  }
+
+  /* Input */
+  .field { position: relative; }
+  .input {
+    height: 56px; width: 100%;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    background: transparent;
+    padding: 0 14px;
+    font-family: var(--font); font-size: 16px; color: var(--text-high);
+  }
+  .input:focus, .input.focused {
+    border: 2px solid #a85f2e;
+    padding: 0 13px;
+    outline: none;
+  }
+  .floater {
+    position: absolute; left: 10px; top: -8px;
+    font-size: 12px; font-weight: 400;
+    background: #fff; padding: 0 4px;
+    color: #a85f2e;
+  }
+
+  /* Chip / badge */
+  .chip {
+    height: 32px; padding: 0 12px; border-radius: 999px;
+    background: #ececec; color: var(--text-high);
+    font-size: 14px; letter-spacing: 0.25px;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid transparent;
+  }
+  .chip.selected {
+    background: rgba(168,95,46,0.08);
+    color: #8a4d25;
+    border-color: #a85f2e;
+  }
+  .badge {
+    height: 20px; padding: 0 8px; border-radius: 999px;
+    font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+    display: inline-flex; align-items: center;
+  }
+  .badge.brand { background: #fbe9db; color: #8a4d25; }
+  .badge.navy { background: #15445D; color: #fff; }
+  .badge.info { background: #e3f1fa; color: #266690; }
+
+  /* FAB */
+  .fab {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #D2793D; color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: var(--elev-6); border: 0;
+  }
+  .fab-ext {
+    height: 56px; padding: 0 20px; border-radius: 999px;
+    background: #a85f2e; color: #fff;
+    font-family: var(--font); font-size: 14px; font-weight: 500;
+    letter-spacing: 1.25px; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 12px;
+    box-shadow: var(--elev-6); border: 0;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid rgba(8,8,8,0.12);
+  }
+  .tab {
+    min-height: 48px; min-width: 90px; padding: 0 16px;
+    font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    color: var(--text-medium);
+  }
+  .tab.active { color: #a85f2e; border-bottom-color: #a85f2e; }
+
+  a { color: #2d78ad; text-decoration: none; }
+  a.hover { color: #266690; text-decoration: underline; }
+
+  .split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .muted { color: var(--text-medium); font-size: 12px; letter-spacing: 0.4px; }
+  .rule { height: 1px; background: #dcdcdc; margin: 48px 0; }
+
+  .type-row { display: grid; grid-template-columns: 160px 1fr; gap: 16px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid #ececec; }
+  .type-row .label { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-medium); }
+  .t-h1 { font-size: 48px; font-weight: 400; letter-spacing: -0.5px; line-height: 1.10; }
+  .t-h3 { font-size: 36px; font-weight: 400; line-height: 1.15; }
+  .t-body { font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.50; }
+  .t-btn { font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase; }
+  .t-ov { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-rust-700); }
+
+  .wrong-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .demo-box { padding: 16px; border-radius: 0; }
+  .demo-box.bad { background: #f7e4e0; }
+  .demo-box.good { background: #e7f2e9; }
+  .fake-btn-bad {
+    height: 36px; padding: 0 16px; border-radius: 4px;
+    background: #D2793D; color: #fff;
+    font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase;
+    display: inline-flex; align-items: center;
+  }
+  .shape-demo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .big-sq {
+    height: 88px; background: var(--color-navy-900); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .small-rd {
+    height: 36px; width: 120px; background: var(--color-rust-700); color: #fff;
+    border-radius: 4px; box-shadow: var(--elev-2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <header class="appbar">
+    <div class="mark" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2 L16 15 H2 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="appbar-title">Falcon West Material</div>
+    <div class="appbar-meta">Design language specimen</div>
+  </header>
+
+  <main class="page">
+    <p class="eyebrow">The one-sentence read</p>
+    <h1>Slightly industrial,<br>not friendly-rounded.</h1>
+    <p class="lede">White and near-white surfaces. Square cards and large containers (radius 0). Softly-rounded 4px controls. Rust-700 as the single action color. Navy as chrome — never a button fill. Raleway throughout. Apps and serial products only, not the marketing sites. Placement / layout locks: <a href="PATTERNS.md">PATTERNS.md</a>.</p>
+
+    <section>
+      <h2>Color — navy is chrome, rust is action</h2>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="chip" style="background:#a85f2e"></div>
+          <div class="meta"><div class="name">rust-700</div><div class="hex">#a85f2e</div><div class="role">Primary · text on rust</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#D2793D"></div>
+          <div class="meta"><div class="name">rust-600</div><div class="hex">#D2793D</div><div class="role">Logo · decorative only</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#15445D"></div>
+          <div class="meta"><div class="name">navy-900</div><div class="hex">#15445D</div><div class="role">Secondary · chrome</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#2d78ad"></div>
+          <div class="meta"><div class="name">sky-600</div><div class="hex">#2d78ad</div><div class="role">Links only</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#fcfefe; border-bottom:1px solid #ececec"></div>
+          <div class="meta"><div class="name">paper-50</div><div class="hex">#fcfefe</div><div class="role">Page ground</div></div>
+        </div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-icon">★</div>
+        <div>
+          <div class="alert-title">The rust rule</div>
+          <div class="alert-body">#D2793D is 3.23:1 on white — legal for the mark, icons, and rules. Illegal for any fill that carries a label. Text-bearing rust steps down to #a85f2e. White text on logo orange is wrong even when it looks most on-brand. On navy, #D2793D is banned entirely; use #e0a06e.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="split">
+      <section>
+        <h2>Type — Raleway carries the UI</h2>
+        <div class="card">
+          <div class="type-row"><div class="label">H2 · 400</div><div class="t-h1">Coverage, not theater.</div></div>
+          <div class="type-row"><div class="label">H3 · 400</div><div class="t-h3">Working tool.</div></div>
+          <div class="type-row"><div class="label">Body1 · 0 track</div><div class="t-body">Body tracking is 0, not Material’s 0.5px. That default fights Raleway across a paragraph.</div></div>
+          <div class="type-row"><div class="label">Button</div><div class="t-btn">Get a quote</div></div>
+          <div class="type-row" style="border-bottom:0"><div class="label">Overline</div><div class="t-ov">Falcon West Energy</div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Shape — the inversion</h2>
+        <div class="card">
+          <div class="shape-demo">
+            <div>
+              <div class="big-sq">Card · app bar · alert · modal</div>
+              <p class="muted" style="margin-top:8px">Large surfaces · radius 0</p>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px">
+              <div class="small-rd">Action</div>
+              <p class="muted">Controls · radius 4</p>
+            </div>
+          </div>
+          <p class="t-body" style="margin-top:16px">Cards are square. Controls are 4px. Do not normalize this. It is the signature of the system.</p>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <h2>Components — one rust action, primary sits right</h2>
+      <div class="grid-3">
+        <div class="card">
+          <p class="eyebrow">Buttons</p>
+          <div class="btn-row" style="justify-content:flex-end">
+            <button class="btn btn-text">Cancel</button>
+            <button class="btn btn-outlined">Save draft</button>
+            <button class="btn btn-contained">Bind policy</button>
+          </div>
+          <p class="muted" style="margin-top:12px">Contained rust, outlined rust, text rust. Navy is chrome, not a button. Focus is 2px navy, 2px offset.</p>
+          <div class="btn-row" style="margin-top:16px">
+            <button class="btn btn-contained focus">Focus</button>
+            <button class="btn btn-outlined">Outlined</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Field + tabs</p>
+          <div class="field" style="margin-bottom:16px">
+            <input class="input focused" value="Acme Drilling LLC" readonly>
+            <span class="floater">Insured name *</span>
+          </div>
+          <div class="tabs">
+            <div class="tab active">Overview</div>
+            <div class="tab">Coverages</div>
+            <div class="tab">Losses</div>
+          </div>
+          <p class="muted" style="margin-top:12px">Resting bound is #8a8a8a, not the decorative hairline. Focus is a 2px rust border — no navy ring on fields.</p>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Chips, badges, FABs</p>
+          <div class="row">
+            <span class="chip">Commercial</span>
+            <span class="chip selected">Energy</span>
+            <span class="badge brand">Brand</span>
+            <span class="badge navy">Navy</span>
+            <span class="badge info">Info</span>
+          </div>
+          <div class="row" style="margin-top:16px">
+            <button class="fab" aria-label="Compose">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 4v14M4 11h14" stroke="#fff" stroke-width="2"/></svg>
+            </button>
+            <button class="fab-ext">
+              <svg width="18" height="18" viewBox="0 0 22 22" fill="none"><path d="M11 4v14M4 11h14" stroke="#fff" stroke-width="2"/></svg>
+              New submission
+            </button>
+          </div>
+          <p class="muted" style="margin-top:12px">Icon-only FAB may use logo orange. Extended carries a label, so it steps down to rust-700.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Legal vs illegal — the easy ways to break it</h2>
+      <div class="wrong-right">
+        <div class="alert danger">
+          <div class="alert-icon">!</div>
+          <div>
+            <div class="alert-title">Broken</div>
+            <div class="alert-body" style="margin-bottom:12px">White text on #D2793D. Logo orange on navy. Rounded cards. Navy button fills. Hairline borders on inputs. Rust links. Body at 60% opacity.</div>
+            <div class="fake-btn-bad">Get a quote</div>
+          </div>
+        </div>
+        <div class="alert" style="background:#e7f2e9;border-left-color:#3f7d4a;color:#2f5f37">
+          <div class="alert-icon" style="background:#3f7d4a">✓</div>
+          <div>
+            <div class="alert-title">On-spec</div>
+            <div class="alert-body" style="margin-bottom:12px">Label sits on rust-700. Navy is chrome only — never a button fill. Cards stay square. Links stay sky on hover. One contained rust button per screen.</div>
+            <button class="btn btn-contained">Get a quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="muted">Specimen built from Falcon West Material tokens. Page #fcfefe · surfaces #ffffff · no border+shadow on the same element · links <a href="#">sky-600</a> / <a class="hover" href="#">sky-700 hover</a>.</p>
+  </main>
+</body>
+</html>

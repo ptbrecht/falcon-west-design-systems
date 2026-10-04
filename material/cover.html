@@ -1,0 +1,131 @@
+<!-- @dsCard height=320 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap">
+<style>
+  .fw-cover {
+    position: relative;
+    width: 960px;
+    height: 320px;
+    background: var(--md-background);
+    overflow: hidden;
+  }
+  .fw-cover svg { position: absolute; inset: 0; display: block; }
+
+  .fw-block   { rx: var(--shape-large); }
+  .fw-navy    { fill: var(--md-secondary); }
+  .fw-orange  { fill: var(--md-primary-decorative); }
+  .fw-sky     { fill: var(--color-sky-500); }
+  .fw-tint    { fill: var(--color-rust-100); }
+
+  .fw-tile    { rx: var(--shape-small); }
+  .fw-tile-on-dark { fill: var(--md-accent-on-dark); }
+  .fw-tile-on-tint { fill: var(--md-primary-decorative); }
+
+  .fw-name {
+    position: absolute;
+    left: 48px;
+    bottom: 92px;
+    width: 432px;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 0.95;
+    color: var(--md-on-background);
+  }
+  .fw-tag {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    width: 432px;
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 1.43;
+    color: var(--md-text-medium);
+  }
+</style>
+
+<div class="fw-cover">
+  <!--
+    blocks:      md-secondary 128x224 (space-10 x space-10+space-9) · md-primary-decorative 344x128 ·
+                 color-sky-500 168x88 · color-rust-100 168x88 — gaps space-2, corners shape-large (0)
+    arrangement: one tall navy slab at x=480, three satellites stacked to its right, the orange band
+                 and the tint block bleeding off the right edge
+    pattern:     tiles cut by the radius tokens, some merged two-wide — chosen because this system's
+                 signature is exactly that contradiction: large surfaces squared at shape-large 0,
+                 controls rounded at shape-small 4, so the slabs are studded with control-sized tiles
+    scales:      tile space-4 (16), merged space-4+space-2+space-4 (40), pitch space-5 (24),
+                 inset space-4 (16), tile corner shape-small (4)
+  -->
+  <svg width="960" height="320" viewBox="0 0 960 320" aria-hidden="true" focusable="false">
+    <rect class="fw-block fw-navy"   x="480" y="48"  width="128" height="224"></rect>
+    <rect class="fw-block fw-orange" x="616" y="48"  width="344" height="128"></rect>
+    <rect class="fw-block fw-sky"    x="616" y="184" width="168" height="88"></rect>
+    <rect class="fw-block fw-tint"   x="792" y="184" width="168" height="88"></rect>
+
+    <g class="fw-tile fw-tile-on-dark">
+      <rect x="496" y="64"  width="16" height="16"></rect>
+      <rect x="520" y="64"  width="16" height="16"></rect>
+      <rect x="544" y="64"  width="16" height="16"></rect>
+      <rect x="568" y="64"  width="16" height="16"></rect>
+
+      <rect x="496" y="88"  width="40" height="16"></rect>
+      <rect x="544" y="88"  width="16" height="16"></rect>
+      <rect x="568" y="88"  width="16" height="16"></rect>
+
+      <rect x="496" y="112" width="16" height="16"></rect>
+      <rect x="520" y="112" width="16" height="16"></rect>
+      <rect x="544" y="112" width="16" height="16"></rect>
+      <rect x="568" y="112" width="16" height="16"></rect>
+
+      <rect x="496" y="136" width="16" height="16"></rect>
+      <rect x="520" y="136" width="16" height="16"></rect>
+      <rect x="544" y="136" width="40" height="16"></rect>
+
+      <rect x="496" y="160" width="16" height="16"></rect>
+      <rect x="520" y="160" width="16" height="16"></rect>
+      <rect x="544" y="160" width="16" height="16"></rect>
+      <rect x="568" y="160" width="16" height="16"></rect>
+
+      <rect x="496" y="184" width="40" height="16"></rect>
+      <rect x="544" y="184" width="16" height="16"></rect>
+      <rect x="568" y="184" width="16" height="16"></rect>
+
+      <rect x="496" y="208" width="16" height="16"></rect>
+      <rect x="520" y="208" width="16" height="16"></rect>
+      <rect x="544" y="208" width="16" height="16"></rect>
+      <rect x="568" y="208" width="16" height="16"></rect>
+
+      <rect x="496" y="232" width="16" height="16"></rect>
+      <rect x="520" y="232" width="40" height="16"></rect>
+      <rect x="568" y="232" width="16" height="16"></rect>
+    </g>
+
+    <g class="fw-tile fw-tile-on-tint">
+      <rect x="808" y="200" width="16" height="16"></rect>
+      <rect x="832" y="200" width="16" height="16"></rect>
+      <rect x="856" y="200" width="40" height="16"></rect>
+      <rect x="904" y="200" width="16" height="16"></rect>
+      <rect x="928" y="200" width="16" height="16"></rect>
+
+      <rect x="808" y="224" width="16" height="16"></rect>
+      <rect x="832" y="224" width="16" height="16"></rect>
+      <rect x="856" y="224" width="16" height="16"></rect>
+      <rect x="880" y="224" width="16" height="16"></rect>
+      <rect x="904" y="224" width="16" height="16"></rect>
+      <rect x="928" y="224" width="16" height="16"></rect>
+
+      <rect x="808" y="248" width="40" height="16"></rect>
+      <rect x="856" y="248" width="16" height="16"></rect>
+      <rect x="880" y="248" width="16" height="16"></rect>
+      <rect x="904" y="248" width="16" height="16"></rect>
+      <rect x="928" y="248" width="16" height="16"></rect>
+    </g>
+  </svg>
+
+  <div class="fw-name">Falcon West<br>Material</div>
+  <div class="fw-tag">Material Design 2, retuned for Falcon West.</div>
+</div>
