@@ -1,0 +1,325 @@
+/**
+ * Falcon West CRM — Material light theme tokens (0.1.64)
+ * Enqueue AFTER existing fwcrm / Material CSS.
+ * Scope: .fw-crm[data-theme="light"]  OR  html.fw-crm-theme-light
+ *
+ * Appearance: Dark | Light | System — DEFAULT = System (prefers-color-scheme)
+ * until user overrides. This file applies only when resolved theme is Light.
+ *
+ * Mobile: status / safe-area / top bar ALWAYS #000 — even in Light.
+ * Light paint applies only below that black chrome.
+ * Desktop header: theme-aware — light chrome in Light (paper/white + ink);
+ *   dark chrome in Dark. Sidebar may stay navy. Not always-black on desktop.
+ *
+ * Not Field. Not Pylon. House Material only.
+ * Not falconwest.com / falconwestenergy.com.
+ *
+ * Claude lock: md-primary = rust-700; decorative = rust-600;
+ * navy chrome-only (never a button fill); cards shape-large 0;
+ * controls shape-small 4; menus elevation-8; focus 2px navy + 2px offset.
+ * See tokens.json + DESIGN.md.
+ */
+
+@font-face {
+	font-family: "Raleway";
+	src: url("./Raleway.ttf") format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+.fw-crm[data-theme="light"],
+html.fw-crm-theme-light,
+html.fw-crm-theme-light .fwcrm-app,
+.fw-crm[data-theme="light"] .fwcrm-app {
+	color-scheme: light;
+
+	--fwcrm-paper: #fcfefe;
+	--fwcrm-surface: #ffffff;
+	--fwcrm-surface-variant: #ececec;
+	--fwcrm-white: #ffffff;
+
+	--fwcrm-ink: #080808;
+	--fwcrm-text: rgba(8, 8, 8, 0.87);
+	--fwcrm-text-high: rgba(8, 8, 8, 0.87);
+	--fwcrm-text-medium: rgba(8, 8, 8, 0.60);
+	--fwcrm-text-disabled: rgba(8, 8, 8, 0.38);
+	--fwcrm-divider: rgba(8, 8, 8, 0.12);
+
+	--fwcrm-line-100: #ececec;
+	--fwcrm-line-200: #dcdcdc;
+	--fwcrm-line-300: #8a8a8a;
+
+	--fwcrm-navy: #15445D;
+	--fwcrm-navy-700: #1e5c7d;
+	--fwcrm-navy-950: #0e3247;
+	--fwcrm-sidebar: #15445D;
+	/* Desktop horizontal top bar — light chrome in Light (sidebar may stay navy) */
+	--fwcrm-chrome: #fcfefe;
+	--fwcrm-chrome-ink: rgba(8, 8, 8, 0.87);
+	--fwcrm-chrome-border: #dcdcdc;
+
+	/* Mobile status / safe-area / top bar — ALWAYS black (theme-independent) */
+	--fwcrm-mobile-chrome: #000000;
+	--fwcrm-mobile-chrome-ink: #080808;
+
+	--fwcrm-rust-800: #8a4d25;
+	--fwcrm-rust-700: #a85f2e;
+	--fwcrm-rust-600: #D2793D; /* logo orange — decorative ONLY */
+	--fwcrm-rust-100: #fbe9db;
+	--fwcrm-on-primary: #ffffff;
+
+	--fwcrm-sky-700: #266690;
+	--fwcrm-sky-600: #2d78ad; /* prefer AA body links / Drive on light */
+	--fwcrm-sky-lock: #5aa0cc; /* legacy dark; fails AA body on white */
+	--fwcrm-sky-100: #e3f1fa;
+
+	--fwcrm-warning: #8a5e10;
+	--fwcrm-danger: #b6432f;
+	--fwcrm-warning-bg: #faf0dc;
+	--fwcrm-danger-bg: #f7e4e0;
+
+	--fwcrm-shape-small: 4px; /* controls */
+	--fwcrm-shape-large: 0px; /* cards, modals, app bar */
+	--fwcrm-shape: var(--fwcrm-shape-small);
+	--md-shape-small: 4px;
+	--md-shape-large: 0px;
+	--md-elevation-menu: 8;
+	--md-focus-ring-width: 2px;
+	--md-focus-ring-offset: 2px;
+	--md-focus-ring-color: #15445D;
+	--fwcrm-font: "Raleway", "Inter", system-ui, sans-serif;
+	--fwcrm-font-display: "Raleway", "Inter", system-ui, sans-serif;
+
+	--fwcrm-row-line: #dcdcdc;
+	--fwcrm-row-hover: rgba(168, 95, 46, 0.06);
+	--fwcrm-elev-1: 0 1px 2px rgba(8, 8, 8, 0.08), 0 1px 1px rgba(8, 8, 8, 0.04);
+	--fwcrm-elev-2: 0 2px 4px rgba(8, 8, 8, 0.10), 0 1px 2px rgba(8, 8, 8, 0.06);
+
+	--md-background: #fcfefe;
+	--md-surface: #ffffff;
+	--md-surface-variant: #ececec;
+	--md-primary: #a85f2e;
+	--md-primary-decorative: #D2793D;
+	--md-on-primary: #ffffff;
+	--md-secondary: #15445D; /* chrome only — never a button fill */
+	--md-on-secondary: #ffffff;
+	--md-text-high: rgba(8, 8, 8, 0.87);
+	--md-text-medium: rgba(8, 8, 8, 0.60);
+	--md-text-disabled: rgba(8, 8, 8, 0.38);
+	--md-outline: #dcdcdc;
+	--md-outline-strong: #8a8a8a;
+	--md-link: #2d78ad;
+	--md-link-hover: #266690;
+	--md-link-lock: #5aa0cc;
+	--md-drag: #fbe9db;
+	--md-warning: #8a5e10;
+	--md-danger: #b6432f;
+	--md-chip-personal-bg: #e3f1fa;
+	--md-chip-personal-fg: #266690;
+	--md-chip-commercial-bg: #15445D;
+	--md-chip-commercial-fg: #ffffff;
+	--md-mobile-chrome: #000000;
+
+	background: var(--fwcrm-paper);
+	color: var(--fwcrm-text);
+	font-family: var(--fwcrm-font);
+}
+
+/* Desktop: theme-aware header (light chrome in Light); sidebar may stay navy */
+.fw-crm[data-theme="light"] .fwcrm-app--standalone,
+html.fw-crm-theme-light .fwcrm-app--standalone {
+	background: var(--fwcrm-paper);
+	color: var(--fwcrm-text);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-sidebar,
+html.fw-crm-theme-light .fwcrm-sidebar {
+	background: var(--fwcrm-navy);
+	color: #ffffff;
+}
+
+.fw-crm[data-theme="light"] .fwcrm-topbar,
+html.fw-crm-theme-light .fwcrm-topbar {
+	background: var(--fwcrm-chrome); /* #fcfefe / white */
+	color: var(--fwcrm-chrome-ink);
+	border-bottom: 1px solid var(--fwcrm-chrome-border);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-topbar .fwcrm-search,
+.fw-crm[data-theme="light"] .fwcrm-topbar input[type="search"],
+html.fw-crm-theme-light .fwcrm-topbar .fwcrm-search,
+html.fw-crm-theme-light .fwcrm-topbar input[type="search"] {
+	border: 1px solid var(--fwcrm-line-300);
+	background: var(--fwcrm-surface);
+	color: var(--fwcrm-text);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-topbar .fwcrm-seg,
+html.fw-crm-theme-light .fwcrm-topbar .fwcrm-seg {
+	border: 1px solid var(--fwcrm-line-300);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-topbar .fwcrm-btn--outlined,
+html.fw-crm-theme-light .fwcrm-topbar .fwcrm-btn--outlined {
+	color: var(--fwcrm-text);
+	border: 1px solid var(--fwcrm-line-300);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-main,
+html.fw-crm-theme-light .fwcrm-main {
+	background: var(--fwcrm-paper);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-card,
+.fw-crm[data-theme="light"] .fwcrm-column,
+html.fw-crm-theme-light .fwcrm-card,
+html.fw-crm-theme-light .fwcrm-column {
+	background: var(--fwcrm-surface);
+	border: 1px solid var(--fwcrm-line-200);
+	border-radius: var(--fwcrm-shape-large);
+	color: var(--fwcrm-text);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-column.is-drop,
+.fw-crm[data-theme="light"] .fwcrm-list-drop.is-drop,
+html.fw-crm-theme-light .fwcrm-column.is-drop {
+	background: var(--fwcrm-rust-100);
+	border-color: var(--fwcrm-rust-700);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-chip--personal,
+html.fw-crm-theme-light .fwcrm-chip--personal {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 8px;
+	border-radius: 999px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	background: var(--md-chip-personal-bg);
+	color: var(--md-chip-personal-fg);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-chip--commercial,
+html.fw-crm-theme-light .fwcrm-chip--commercial {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 8px;
+	border-radius: 999px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	background: var(--md-chip-commercial-bg);
+	color: var(--md-chip-commercial-fg);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-btn--contained,
+html.fw-crm-theme-light .fwcrm-btn--contained {
+	background: var(--fwcrm-rust-700);
+	color: #ffffff;
+}
+
+.fw-crm[data-theme="light"] .fwcrm-btn--contained:hover,
+html.fw-crm-theme-light .fwcrm-btn--contained:hover {
+	background: var(--fwcrm-rust-800);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-btn--outlined,
+html.fw-crm-theme-light .fwcrm-btn--outlined {
+	background: transparent;
+	color: var(--fwcrm-text);
+	border: 1px solid var(--fwcrm-line-300);
+}
+
+.fw-crm[data-theme="light"] a,
+.fw-crm[data-theme="light"] .fwcrm-drive,
+html.fw-crm-theme-light a,
+html.fw-crm-theme-light .fwcrm-drive {
+	color: var(--md-link);
+	text-decoration: none;
+}
+
+.fw-crm[data-theme="light"] a:hover,
+.fw-crm[data-theme="light"] .fwcrm-drive:hover,
+html.fw-crm-theme-light a:hover {
+	color: var(--md-link-hover);
+	text-decoration: underline;
+}
+
+.fw-crm[data-theme="light"] .fwcrm-input,
+.fw-crm[data-theme="light"] .fwcrm-select,
+html.fw-crm-theme-light .fwcrm-input,
+html.fw-crm-theme-light .fwcrm-select {
+	border: 1px solid var(--fwcrm-line-300);
+	border-radius: var(--fwcrm-shape-small);
+	background: var(--fwcrm-surface);
+	color: var(--fwcrm-text);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-input:focus,
+.fw-crm[data-theme="light"] .fwcrm-select:focus,
+html.fw-crm-theme-light .fwcrm-input:focus,
+html.fw-crm-theme-light .fwcrm-select:focus {
+	outline: none;
+	border: 2px solid var(--fwcrm-rust-700);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-table th,
+.fw-crm[data-theme="light"] .fwcrm-table td,
+html.fw-crm-theme-light .fwcrm-table th,
+html.fw-crm-theme-light .fwcrm-table td {
+	border-bottom: 1px solid var(--fwcrm-row-line);
+	color: var(--fwcrm-text);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-table th,
+html.fw-crm-theme-light .fwcrm-table th {
+	color: var(--fwcrm-text-medium);
+	font-weight: 600;
+}
+
+.fw-crm[data-theme="light"] .fwcrm-table tr:hover td,
+html.fw-crm-theme-light .fwcrm-table tr:hover td {
+	background: var(--fwcrm-row-hover);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-exp--warn,
+html.fw-crm-theme-light .fwcrm-exp--warn {
+	color: var(--fwcrm-warning);
+}
+
+.fw-crm[data-theme="light"] .fwcrm-exp--overdue,
+html.fw-crm-theme-light .fwcrm-exp--overdue {
+	color: var(--fwcrm-danger);
+}
+
+/**
+ * Mobile chrome — ALWAYS black, independent of data-theme.
+ * Apply on phone shell even when light tokens paint the body below.
+ */
+.fwcrm-mobile-chrome,
+.fw-crm .fwcrm-mobile-chrome,
+html.fw-crm-theme-light .fwcrm-mobile-chrome,
+.fw-crm[data-theme="light"] .fwcrm-mobile-chrome,
+.fw-crm[data-theme="dark"] .fwcrm-mobile-chrome {
+	background: #000000;
+	color: #ffffff;
+	/*
+	  Island clearance (P0): black chrome height ≥ safe-area-inset-top + title row.
+	  Titles/icons must NOT sit under the Dynamic Island.
+	  Use inset (~47–54px on island phones) + extra ~8–12px nudge.
+	*/
+	padding-top: max(54px, calc(env(safe-area-inset-top, 47px) + 12px));
+	padding-left: env(safe-area-inset-left, 0);
+	padding-right: env(safe-area-inset-right, 0);
+	box-sizing: border-box;
+}
+
+.fwcrm-mobile-chrome .fwcrm-mobile-title,
+.fwcrm-mobile-chrome .fwcrm-mobile-actions {
+	/* keep title row clear of island pill / status blur */
+	margin-top: 8px;
+}

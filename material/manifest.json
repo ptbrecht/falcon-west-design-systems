@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 3,
+  "name": "Falcon West Material",
+  "namespace": "FalconWest",
+  "files": [
+    "tokens.css"
+  ],
+  "libraries": [],
+  "components": [],
+  "assetGroups": []
+}
