@@ -3,6 +3,8 @@ Owner: Writing → design-systems writing/ (stand-alone)
 
 # Falcon West writing guide: emulate Chuck Yates (Old Man Coffee)
 
+Voice and copy source of truth is [`voice.md`](voice.md). This file is the Falcon West application of that craft (insurance moves, what not to costume). If they disagree on headlines or how to refer to AI, `voice.md` wins: headlines are Harry Dry-style (2–6 words, concrete), and AI is a tool or a program, never a person.
+
 Source: https://collide.io/old-man-coffee (Chuck Yates / Collide).  
 Goal: steal the **craft**, not the costume. We write insurance for Falcon West. We are not Collide, not PE Twitter, and not Chuck. We want his internet clarity, not his brand.
 
@@ -62,7 +64,7 @@ He names the enemy: marketing bullshit, magic black box, consortium-speak, perfe
 ### 8. Titles that sound spoken.
 "I'd Have to Be a Real Asshole to Say No." "Out Over Your Skis." "I Thought My Ex-wife Hated Me Until I Started Selling Enterprise Software."
 
-**FW move:** Prefer spoken titles over SEO soup. SEO can live in the meta pack. Display title should still sound like a human.
+**FW move:** Prefer spoken titles over SEO soup. SEO can live in the meta pack. Display title should still sound like a human. Length and concreteness follow [`voice.md`](voice.md): 2–6 words, Harry Dry.
 
 ### 9. Soft product, late.
 Bill of Rights / Collide pitch arrives **after** trust. Often a short close, not a hard CTA.

@@ -7,9 +7,17 @@ This folder is writing, not visual language. Do not mix these files with `materi
 
 **Gold** = Peter-locked or long-standing house rule. **Draft** = Writing seed; pending Peter mark before brand law.
 
+**Voice and copy source of truth:** [voice.md](voice.md). Lane files, locks, and publish rules stay in the other files. They do not replace it.
+
+House rules in that file:
+
+- Headlines are Harry Dry-style: 2–6 words, concrete.
+- AI is never personified. Refer to AI as a tool or a program.
+
 | File | Status | What |
 |---|---|---|
-| [chuck-style.md](chuck-style.md) | **gold** | Insights/newsletter craft (Chuck → Falcon West). Shared across both sites — emulate craft, not persona. |
+| [voice.md](voice.md) | **gold** | Voice and copy source of truth. Chuck Yates body, Harry Dry headlines, Peter’s teaching voice. |
+| [chuck-style.md](chuck-style.md) | **gold** | Falcon West application of that craft (insurance moves). Defers to voice.md on headlines and AI. |
 | [personal-lines.md](personal-lines.md) | draft | Personal / private-client / Coverage Scene language on **falconwest.com** |
 | [commercial-lines.md](commercial-lines.md) | draft | Commercial lanes on **falconwest.com** |
 | [energy.md](energy.md) | draft | falconwestenergy.com voice + accordion |
@@ -32,4 +40,4 @@ This folder is writing, not visual language. Do not mix these files with `materi
 
 ## Sync note
 
-Prefer **this pack** as the writing source of truth in the repo. Mapped from Writing’s numbered files (`00`–`09`) to dest names above.
+[`voice.md`](voice.md) is the voice and copy source of truth. The other files are lane, lock, and publish rules, mapped from Writing’s numbered files (`00`–`09`) onto the names above. Do not keep a second copy of the style guide.
