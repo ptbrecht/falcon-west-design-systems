@@ -268,6 +268,9 @@ Score a plugin screen against this file — not against marketing sites.
 
 ## Specimen
 
-Token and component paint live in [`specimen.html`](specimen.html). This file
-is the placement contract those components must obey when composed into
-screens. Password / Academy gate layout: [`password-gate.md`](password-gate.md).
+Component paint for scoring still renders in the retired leftover
+[`retired/specimen.html`](retired/specimen.html). If that page disagrees with
+[`tokens.json`](tokens.json), [`README.md`](README.md), [`cover.html`](cover.html),
+or [`manifest.json`](manifest.json), the Claude pack wins. This file is the
+placement contract those components must obey when composed into screens.
+Password / Academy gate layout: [`password-gate.md`](password-gate.md).

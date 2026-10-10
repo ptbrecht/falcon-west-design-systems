@@ -4,7 +4,7 @@
 **Scope:** House **Material** light face only. Not Field (scrapped). Not Pylon.  
 **Layout:** unchanged — paint + theme only. Home Screen icon **E** stays.
 
-**Sources:** [`README.md`](README.md), [`tokens.json`](tokens.json). CRM paint notes in this file and [`light-tokens.css`](light-tokens.css). Leftover UX seed: [`DESIGN.md`](DESIGN.md) (superseded).  
+**Sources:** [`README.md`](README.md), [`tokens.json`](tokens.json). CRM paint notes in this file and [`light-tokens.css`](light-tokens.css). Leftover UX seed, retired: [`retired/DESIGN.md`](retired/DESIGN.md).  
 **Peter locks (0.1.64):** Appearance default = **System**; mobile status/safe-area **always black**; desktop header **theme-aware** (light chrome in Light).
 
 ---
@@ -89,7 +89,7 @@ Do **not** keep navy on the desktop top bar in Light. Do **not** invent always-b
 
 **Font:** Raleway (UI + display). Fallback: Inter / system-ui. Shared: [`../fonts/Raleway.ttf`](../fonts/Raleway.ttf).  
 **Radii (Claude lock):** `--shape-large` **0** for cards / modals / app bar; `--shape-small` **4px** for controls. Menus at elevation-8. Focus: 2px navy + 2px offset.  
-**Source of truth:** [`tokens.json`](tokens.json) + [`README.md`](README.md). Leftover UX seed: [`DESIGN.md`](DESIGN.md) (superseded).
+**Source of truth:** [`tokens.json`](tokens.json) + [`README.md`](README.md). Leftover UX seed, retired: [`retired/DESIGN.md`](retired/DESIGN.md).
 
 ---
 

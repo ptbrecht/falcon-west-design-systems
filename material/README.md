@@ -11,7 +11,7 @@ being ported into WordPress rather than pulled from a framework.
 
 This folder's `tokens.json`, `cover.html`, and `manifest.json` are the locked
 Claude pack (as shipped). They are Material truth when they disagree with the
-earlier UX `DESIGN.md` / specimen.
+retired UX seed in [`retired/`](retired/) (`DESIGN.md`, `specimen.html`).
 
 It ships as a token layer in the `falconwest/mu-core` MU-plugin: an entry point
 `styles.css` that imports five token files.

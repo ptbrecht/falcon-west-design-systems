@@ -1,8 +1,8 @@
 # Falcon West Material — Design Language Specification
 
-> **Superseded as Material truth.** Prefer the Claude pack in this folder:
-> [`tokens.json`](tokens.json), [`README.md`](README.md), [`cover.html`](cover.html),
-> [`manifest.json`](manifest.json). This file is leftover UX seed. If it disagrees
+> **Retired leftover.** Moved out of the Material root so it is not mistaken for the source of truth.
+> Prefer the Claude pack one level up: [`../tokens.json`](../tokens.json), [`../README.md`](../README.md),
+> [`../cover.html`](../cover.html), [`../manifest.json`](../manifest.json). If this file disagrees
 > with those files, the Claude pack wins.
 
 A complete, image-free description of the Falcon West design language. Every value here is
@@ -15,8 +15,8 @@ described here, the correct answer is "whatever Material 2 specifies."
 **Scope — apps only.** Material is for apps, CRM, Tools, Academy gates, and other serial
 team products (`app.falconwest.com`). It does **not** cover falconwest.com or
 falconwestenergy.com. Those are separate website systems in `falcon-west/` and
-`falcon-west-energy/`. Token roles in `tokens.json` are the source of truth when this
-file and an older specimen disagree.
+`falcon-west-energy/`. Token roles in [`../tokens.json`](../tokens.json) are the source of truth when this
+file and [`specimen.html`](specimen.html) disagree.
 
 **Locked roles (Claude pack):** `--md-primary` = rust-700; decorative = rust-600; navy is
 secondary **chrome only** (never a button fill); sky links stay sky on hover; cards /

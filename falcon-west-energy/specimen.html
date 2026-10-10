@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Falcon West Website — Design System Specimen</title>
+<style>
+  @font-face {
+    font-family: "Raleway";
+    src: url("fonts/Raleway.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "Crimson Text";
+    src: url("fonts/CrimsonText-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "Crimson Text";
+    src: url("fonts/CrimsonText-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "Crimson Text";
+    src: url("fonts/CrimsonText-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+  }
+
+  :root {
+    --navy-900: #15445D;
+    --rust-600: #D2793D;
+    --rust-700: #A85F2E;
+    --sky-500: #3D96D2;
+    --sky-600: #2D78AD;
+    --sky-700: #2F78A7;
+    --sky-a11y-fill: #2F78A7;
+    --sky-a11y-hover: #266690;
+    --ink: #080808;
+    --body: #434343;
+    --muted: #6B6B6B;
+    --line: #DCDCDC;
+    --paper: #FCFEFE;
+    --white: #FFFFFF;
+    --focus-ring: rgba(210,121,61,0.28);
+    --energy-ring: rgba(47,120,167,0.28);
+    --shadow-card: 0 1px 2px rgba(8,8,8,.06), 0 4px 12px rgba(8,8,8,.06);
+    --display: "Raleway", sans-serif;
+    --serif: "Crimson Text", serif;
+    --r-sm: 3px;
+    --r-md: 6px;
+    --r-lg: 10px;
+    --r-pill: 999px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    width: 1440px;
+    font-family: var(--serif);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ——— Nav: navy brand field, not a button ——— */
+  .nav {
+    height: 68px;
+    background: var(--navy-900);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    padding: 0 64px;
+    gap: 20px;
+  }
+  .wordmark {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    color: #fff;
+  }
+  .tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--paper);
+    opacity: 0.92;
+    margin-right: auto;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--paper);
+  }
+  .nav-links span { opacity: 0.88; }
+
+  .page { padding: 40px 64px 36px; }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy-900);
+    margin-bottom: 10px;
+  }
+
+  h1.display-xl {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  h2.display-md {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  h3.display-sm {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--body);
+  }
+  .body {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--body);
+  }
+  .caption {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .quote {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  a { color: var(--sky-600); text-decoration: underline; }
+  a.hover { color: var(--rust-600); }
+
+  section { margin-bottom: 36px; }
+  .sec-head { margin-bottom: 16px; }
+
+  /* Rules */
+  .rules {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .rule {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-card);
+    padding: 18px 18px 16px;
+  }
+  .rule-num {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy-900);
+    margin-bottom: 8px;
+  }
+  .rule p { font-size: 16px; line-height: 1.5; color: var(--body); }
+  .rule strong { color: var(--ink); font-weight: 600; }
+
+  /* Swatches */
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+  }
+  .swatch {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+  .swatch .chip { height: 76px; }
+  .swatch .meta { padding: 12px 14px 14px; }
+  .swatch .name {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+  .swatch .hex { font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .swatch .role { font-size: 14px; color: var(--body); margin-top: 6px; line-height: 1.35; }
+
+  /* Type pair */
+  .type-board {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-card);
+    padding: 32px 36px 30px;
+  }
+  .type-board .display-xl { margin-bottom: 16px; max-width: 1040px; }
+  .type-board .body { max-width: 760px; margin-bottom: 18px; }
+  .type-meta {
+    display: flex;
+    gap: 28px;
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .type-meta span {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Components */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr 0.9fr;
+    gap: 16px;
+  }
+  .panel {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-card);
+    padding: 22px 22px 20px;
+  }
+  .panel .eyebrow { margin-bottom: 14px; }
+
+  .btn {
+    height: 44px;
+    padding: 0 22px;
+    border-radius: var(--r-md);
+    border: 0;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: default;
+  }
+  .btn-fill { background: var(--rust-600); color: var(--paper); }
+  .btn-fill.hover { background: var(--rust-700); }
+  .btn-outline {
+    background: var(--white);
+    color: var(--rust-600);
+    border: 1.5px solid var(--rust-600);
+    padding: 0 20.5px;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--rust-600);
+    padding: 0 10px;
+  }
+  .btn.focus {
+    border: 2px solid var(--rust-600);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+    padding: 0 20px;
+  }
+  .btn-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+  .field-label {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .input {
+    height: 48px;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--white);
+    padding: 0 14px;
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .input.focused {
+    border: 2px solid var(--rust-600);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+    padding: 0 13px;
+    outline: none;
+  }
+
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--line);
+    margin-top: 18px;
+  }
+  .tab {
+    min-height: 42px;
+    padding: 0 16px;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    color: var(--muted);
+  }
+  .tab.active { color: var(--rust-600); border-bottom-color: var(--rust-600); }
+
+  .mini-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-card);
+    padding: 16px 18px;
+  }
+  .mini-card h3 { margin-bottom: 6px; }
+
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .badge {
+    height: 22px;
+    padding: 0 10px;
+    border-radius: var(--r-pill);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    color: var(--paper);
+  }
+  .badge.rust { background: var(--rust-600); }
+  .badge.sky { background: var(--sky-500); }
+  .badge.navy { background: var(--navy-900); }
+
+  /* Energy */
+  .energy {
+    background: var(--navy-900);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+  }
+  .energy-head {
+    padding: 22px 28px 18px;
+    color: var(--paper);
+  }
+  .energy-head .eyebrow { color: #9FCBE8; }
+  .energy-head h2 { color: var(--paper); margin-bottom: 6px; }
+  .energy-head p { color: var(--paper); opacity: 0.88; font-size: 16px; line-height: 1.5; max-width: 820px; }
+  .energy-body {
+    background: var(--paper);
+    margin: 0 12px 12px;
+    border-radius: 8px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.95fr 0.95fr;
+    gap: 16px;
+  }
+  .e-btn-fill { background: var(--sky-a11y-fill); color: var(--paper); }
+  .e-btn-fill.hover { background: var(--sky-a11y-hover); }
+  .e-btn-outline {
+    background: var(--white);
+    color: var(--sky-a11y-fill);
+    border: 1.5px solid var(--sky-a11y-fill);
+    padding: 0 20.5px;
+  }
+  .e-btn-ghost { background: transparent; color: var(--sky-a11y-fill); padding: 0 10px; }
+  .e-btn.focus {
+    border: 2px solid var(--sky-a11y-fill);
+    box-shadow: 0 0 0 3px var(--energy-ring);
+    padding: 0 20px;
+  }
+  .e-input.focused {
+    border: 2px solid var(--sky-a11y-fill);
+    box-shadow: 0 0 0 3px var(--energy-ring);
+    padding: 0 13px;
+  }
+  .e-tab.active { color: var(--sky-a11y-fill); border-bottom-color: var(--sky-a11y-fill); }
+  .energy a { color: var(--sky-600); }
+  .note {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: #9FCBE8;
+    margin-top: 8px;
+  }
+
+  /* Legal vs illegal */
+  .pairs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .pair {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-card);
+    padding: 16px;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 12px;
+  }
+  .pair h3 { margin-bottom: 0; }
+  .cell {
+    border-radius: var(--r-md);
+    padding: 14px 14px 12px;
+    min-height: 148px;
+  }
+  .cell.broken { background: #F6F1EE; }
+  .cell.spec { background: #F3F6F4; }
+  .mark {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .mark.bad { color: #8F3323; }
+  .mark.good { color: #2F5F37; }
+  .fake-navy-btn {
+    height: 44px; padding: 0 22px; border-radius: 6px;
+    background: #15445D; color: #FCFEFE;
+    font-family: var(--display); font-weight: 700; font-size: 15px;
+    display: inline-flex; align-items: center;
+  }
+  .rust-page {
+    background: #D2793D;
+    color: #FCFEFE;
+    border-radius: 6px;
+    padding: 12px 14px;
+    min-height: 72px;
+  }
+  .rust-page p { color: #FCFEFE; font-size: 16px; line-height: 1.45; }
+  .paper-page {
+    background: #FCFEFE;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
+    padding: 12px 14px;
+    min-height: 72px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  .footer p { font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wordmark">Falcon West</div>
+    <div class="tagline">Serving You Since 1981</div>
+    <nav class="nav-links" aria-label="Specimen destinations">
+      <span>Personal</span>
+      <span>Commercial</span>
+      <span>Energy</span>
+      <span>About</span>
+      <span>Contact</span>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section>
+      <p class="eyebrow">Website + client-facing system</p>
+      <h1 class="display-xl" style="font-size:40px;line-height:1.1;max-width:980px;">Traditional and trust-first — established and personal, not trendy.</h1>
+      <p class="lead" style="margin-top:12px;max-width:820px;">Classic serif wordmark voice, navy as the main brand field, rust only on the thing you click. Falcon West for families and businesses. Energy is the same system with the orange turned off.</p>
+      <div class="rules">
+        <article class="rule">
+          <div class="rule-num">01 · Navy</div>
+          <p><strong>#15445D</strong> is the main brand color — nav, dark sections, large fields. Never a button fill or button border.</p>
+        </article>
+        <article class="rule">
+          <div class="rule-num">02 · Buttons</div>
+          <p>Buttons are always rust <strong>#D2793D</strong> — filled, or white with an orange border. Hover <strong>#A85F2E</strong>.</p>
+        </article>
+        <article class="rule">
+          <div class="rule-num">03 · Sky</div>
+          <p>Sky is reserved for text hyperlinks. Link <strong>#2D78AD</strong>. Link hover <strong>#D2793D</strong>.</p>
+        </article>
+        <article class="rule">
+          <div class="rule-num">04 · Accents</div>
+          <p>Rust and sky are highlight and rollover only. Resist rust as “primary.” Never a dominant background.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <p class="eyebrow">Palette</p>
+        <h2 class="display-md">The six colors the site is allowed to lean on</h2>
+      </div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="chip" style="background:#15445D"></div>
+          <div class="meta">
+            <div class="name">navy-900</div>
+            <div class="hex">#15445D</div>
+            <div class="role">Main brand. Nav and dark fields.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#D2793D"></div>
+          <div class="meta">
+            <div class="name">rust-600</div>
+            <div class="hex">#D2793D</div>
+            <div class="role">Button fill. Not a background.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#A85F2E"></div>
+          <div class="meta">
+            <div class="name">rust-700</div>
+            <div class="hex">#A85F2E</div>
+            <div class="role">Button hover only.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#3D96D2"></div>
+          <div class="meta">
+            <div class="name">sky-500</div>
+            <div class="hex">#3D96D2</div>
+            <div class="role">Decorative / logo / non-a11y fill only.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#2D78AD"></div>
+          <div class="meta">
+            <div class="name">sky-600</div>
+            <div class="hex">#2D78AD</div>
+            <div class="role">Text hyperlink default.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#FCFEFE;border-bottom:1px solid #DCDCDC"></div>
+          <div class="meta">
+            <div class="name">paper-50</div>
+            <div class="hex">#FCFEFE</div>
+            <div class="role">Page ground. On-dark type.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <p class="eyebrow">Type pair · do not add a third</p>
+        <h2 class="display-md">Raleway ExtraBold with Crimson Text</h2>
+      </div>
+      <div class="type-board">
+        <h1 class="display-xl">Coverage that protects what you’ve built.</h1>
+        <p class="body">Falcon West has helped families and businesses in the region find the right coverage since 1981 — no jargon, no pressure. We sit with you, learn what you’ve built, and place it with care.</p>
+        <p class="quote">“Serving You Since 1981.” That line is the voice — tenure, not hype.</p>
+        <div class="type-meta">
+          <span>Display xl · Raleway 800 · 56 / 1.1</span>
+          <span>Body · Crimson 400 · 18 / 1.6</span>
+          <span>Pull-quote · Crimson Italic</span>
+          <span>Headings #080808 · Body #434343</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <p class="eyebrow">Main brand components</p>
+        <h2 class="display-md">Rust is the click. Navy stays in the chrome.</h2>
+      </div>
+      <div class="comp-grid">
+        <div class="panel">
+          <p class="eyebrow">Buttons · Title Case</p>
+          <div class="btn-row">
+            <button class="btn btn-fill">Request a Quote</button>
+            <button class="btn btn-outline">Call Us</button>
+            <button class="btn btn-ghost">Learn More</button>
+          </div>
+          <div class="btn-row" style="margin-top:14px">
+            <button class="btn btn-fill hover">Hover</button>
+            <button class="btn btn-fill focus">Focus</button>
+          </div>
+          <p class="caption" style="margin-top:14px;">Filled rust, white with an orange border, ghost. Focus is a 2px orange border and a soft 3px orange ring — not a navy ring. <a href="#">Read the coverage guide</a> · <a class="hover" href="#">link hover</a>.</p>
+        </div>
+
+        <div class="panel">
+          <p class="eyebrow">Field + tabs</p>
+          <label class="field-label" for="name">Your name</label>
+          <input class="input focused" id="name" value="Peter Brecht" readonly>
+          <p class="caption" style="margin-top:8px;">Labelled field. Radius 6px, matching the button. Orange focus.</p>
+          <div class="tabs">
+            <div class="tab active">Personal</div>
+            <div class="tab">Commercial</div>
+            <div class="tab">Life</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <p class="eyebrow">Card + badges</p>
+          <div class="mini-card">
+            <h3 class="display-sm">A policy that fits the life you have.</h3>
+            <p class="body" style="font-size:16px;">White card, 1px hairline, 6px, soft dual shadow. No left-border stripe.</p>
+          </div>
+          <div class="badges" style="margin-top:16px">
+            <span class="badge rust">Rust</span>
+            <span class="badge sky">Sky</span>
+            <span class="badge navy">Navy</span>
+          </div>
+          <p class="caption" style="margin-top:12px;">Pills are badges only — never buttons.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="energy">
+        <div class="energy-head">
+          <p class="eyebrow">Energy sub-brand</p>
+          <h2 class="display-md">Falcon West Energy Insurance Solutions</h2>
+          <p>Same type, spacing, and components. Navy remains the main brand field. Token override only — Energy never uses rust or orange. Palette is black, white, and blue tones.</p>
+          <p class="note">Token override · not a second system</p>
+        </div>
+        <div class="energy-body">
+          <div>
+            <p class="eyebrow">Buttons</p>
+            <div class="btn-row">
+              <button class="btn e-btn-fill">Request a Quote</button>
+              <button class="btn e-btn-outline">Call Us</button>
+              <button class="btn e-btn-ghost">Learn More</button>
+            </div>
+            <div class="btn-row" style="margin-top:12px">
+              <button class="btn e-btn-fill hover">Hover</button>
+              <button class="btn e-btn-fill e-btn focus">Focus</button>
+            </div>
+            <p class="caption" style="margin-top:12px;">Fill #2F78A7 · hover #266690 · focus sky a11y ring. <a href="#">Energy industries we serve</a>.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Field + tabs</p>
+            <label class="field-label" for="op">Operation name</label>
+            <input class="input e-input focused" id="op" value="West Basin Drilling" readonly>
+            <div class="tabs" style="margin-top:14px">
+              <div class="tab e-tab active">Upstream</div>
+              <div class="tab">Midstream</div>
+              <div class="tab">Services</div>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">Card + badges</p>
+            <div class="mini-card">
+              <h3 class="display-sm">Coverage for the work that fuels the region.</h3>
+              <p class="body" style="font-size:16px;">Hairline card, no rust, no orange stripe, no leftover main-brand accent.</p>
+            </div>
+            <div class="badges" style="margin-top:14px">
+              <span class="badge sky">Sky</span>
+              <span class="badge navy">Navy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom:22px">
+      <div class="sec-head">
+        <p class="eyebrow">Legal vs illegal</p>
+        <h2 class="display-md">The three ways this board gets broken</h2>
+      </div>
+      <div class="pairs">
+        <article class="pair">
+          <h3 class="display-sm">Navy is not a button</h3>
+          <div class="cell broken">
+            <div class="mark bad">Broken</div>
+            <div class="fake-navy-btn">Request a Quote</div>
+            <p class="caption" style="margin-top:10px;">Navy fill on a control. The main brand color is chrome, not the click.</p>
+          </div>
+          <div class="cell spec">
+            <div class="mark good">On spec</div>
+            <button class="btn btn-fill">Request a Quote</button>
+            <p class="caption" style="margin-top:10px;">Rust fill. Navy stays in the nav and dark sections.</p>
+          </div>
+        </article>
+
+        <article class="pair">
+          <h3 class="display-sm">Rust is not a page</h3>
+          <div class="cell broken">
+            <div class="mark bad">Broken</div>
+            <div class="rust-page">
+              <p>A rust field used as a section background. Highlight color, asked to carry the page.</p>
+            </div>
+          </div>
+          <div class="cell spec">
+            <div class="mark good">On spec</div>
+            <div class="paper-page">
+              <p class="body" style="font-size:16px;">Page is paper-50 #FCFEFE. Rust appears only on the button you mean.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="pair">
+          <h3 class="display-sm">Energy never wears rust</h3>
+          <div class="cell broken">
+            <div class="mark bad">Broken</div>
+            <button class="btn btn-fill">Request a Quote</button>
+            <p class="caption" style="margin-top:10px;">Main-brand rust on an Energy surface. The override was ignored.</p>
+          </div>
+          <div class="cell spec">
+            <div class="mark good">On spec</div>
+            <button class="btn e-btn-fill">Request a Quote</button>
+            <p class="caption" style="margin-top:10px;">Sky a11y fill #2F78A7. Black, white, and blue tones only. #3D96D2 is decorative / logo only.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Falcon West website system · falconwest.com · falconwestenergy.com · not the Material app language.</p>
+      <p>Raleway ExtraBold + Crimson Text · self-hosted · flat color only.</p>
+    </footer>
+  </main>
+</body>
+</html>
