@@ -23,7 +23,7 @@ Owner: Writing → design-systems writing/ (stand-alone)
 - Affluent / high net worth on skim pins → prefer **successful / accomplished**
 
 ## Persona / brand
-- Never personify any AI (it, not he/she)
+- Never personify any AI. Refer to it as a tool or a program (it, not he/she). Same house rule as [`voice.md`](voice.md).
 - Never suggest the name **Cord**
 - Never old-man narrator, “listen up kids,” fogey tone, age theater (Peter is not old)
 - Do not cosplay Chuck / Collide / “Sip slow, my friends”

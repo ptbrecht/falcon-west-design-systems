@@ -13,7 +13,7 @@ assets/                     # logos + brand style guide
 material/                   # apps / CRM / Tools / serial products ONLY
 falcon-west/                # falconwest.com — rust buttons
 falcon-west-energy/         # falconwestenergy.com — sky buttons, never rust
-writing/                    # gold + draft writing pack + Personal Lines gold PDFs
+writing/                    # voice.md source of truth + gold/draft pack + PL gold PDFs
 ```
 
 Shared typefaces live in [`fonts/`](fonts/).
@@ -117,11 +117,21 @@ Do not add a third typeface or swap these roles.
 
 Stand-alone pack in [`writing/`](writing/), separate from the three visual systems. Index: [`writing/README.md`](writing/README.md).
 
+### Voice and copy
+
+Source of truth: [`writing/voice.md`](writing/voice.md). Chuck Yates body, Harry Dry headlines, Peter’s teaching voice. It does not replace the lane, lock, or publish files.
+
+Two house rules:
+
+- Headlines are Harry Dry-style: 2–6 words, concrete.
+- AI is never personified. Refer to AI as a tool or a program.
+
 **Gold** = Peter-locked or long-standing house rule. **Draft** = writing seed; pending Peter’s mark before it is brand law.
 
 | File | Status | For |
 |---|---|---|
-| [`writing/chuck-style.md`](writing/chuck-style.md) | **gold** | Insights / newsletter craft, shared across both sites |
+| [`writing/voice.md`](writing/voice.md) | **gold** | Voice and copy source of truth |
+| [`writing/chuck-style.md`](writing/chuck-style.md) | **gold** | Falcon West application of that craft. Defers to `voice.md` on headlines and AI. |
 | [`writing/personal-lines.md`](writing/personal-lines.md) | draft | Personal Lines on **falconwest.com** |
 | [`writing/commercial-lines.md`](writing/commercial-lines.md) | draft | Commercial Lines on **falconwest.com** |
 | [`writing/energy.md`](writing/energy.md) | draft | Energy on **falconwestenergy.com** |
