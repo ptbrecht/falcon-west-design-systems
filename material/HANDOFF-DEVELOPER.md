@@ -6,7 +6,7 @@
 **Layout:** unchanged — **theme + colors only** (0.1.64). Home Screen icon **E** stays.  
 **In scope beyond paint:** Island padding + rail theme dot only. No Lists toggle / XDate as in-scope.
 
-**Token lock:** [`tokens.json`](tokens.json) and [`README.md`](README.md) (Claude pack) win. `--md-primary` is **rust-700**. Cards are square (`0`). Navy is chrome, never a button fill. Leftover UX seed: [`DESIGN.md`](DESIGN.md) (superseded).
+**Token lock:** [`tokens.json`](tokens.json) and [`README.md`](README.md) (Claude pack) win. `--md-primary` is **rust-700**. Cards are square (`0`). Navy is chrome, never a button fill. Leftover UX seed, retired: [`retired/DESIGN.md`](retired/DESIGN.md) and [`retired/specimen.html`](retired/specimen.html).
 
 **CRM face:** documented in [`CRM-FACE.md`](CRM-FACE.md) as a **known Material variant** (Energy × Material, Accent C sky CTAs, light + dark) — **not** a fourth design system. Placement still scores on [`PATTERNS.md`](PATTERNS.md). Claude rust-700 remains Material `--md-primary` for other apps; on the CRM face, primary actions use Accent C sky `#2d78ad` (no rust primary *on this face*).
 

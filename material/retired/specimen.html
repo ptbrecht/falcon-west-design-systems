@@ -6,7 +6,7 @@
 <style>
   @font-face {
     font-family: "Raleway";
-    src: url("fonts/Raleway.ttf") format("truetype");
+    src: url("../../fonts/Raleway.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -42,6 +42,15 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: var(--color-paper-50); }
+  .retired-banner {
+    background: #fbe9db;
+    color: #080808;
+    padding: 16px 24px;
+    font-size: 15px;
+    line-height: 1.45;
+    border-bottom: 4px solid #a85f2e;
+  }
+  .retired-banner a { color: #2d78ad; }
   body {
     width: 1440px;
     font-family: var(--font);
@@ -285,6 +294,14 @@
 </style>
 </head>
 <body>
+  <div class="retired-banner">
+    <strong>Retired leftover.</strong> This specimen is earlier UX seed, not Material truth.
+    The Claude pack wins if they disagree:
+    <a href="../tokens.json">tokens.json</a>,
+    <a href="../README.md">README.md</a>,
+    <a href="../cover.html">cover.html</a>,
+    <a href="../manifest.json">manifest.json</a>.
+  </div>
   <header class="appbar">
     <div class="mark" aria-hidden="true">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
